@@ -38,14 +38,14 @@
 
 / {
 
-//    // Activate BT_OUT_SYS layer by pressing ALTGRD and FONCTIONS
-//     conditional_layers {
-//         compatible = "zmk,conditional-layers";
-//         adajust_layer {
-//             if-layers = <FONCTIONS ALTGRD>;
-//             then-layer = <BT_OUT_SYS>;
-//         };
-//     };
+   // Activate BT_OUT_SYS layer by pressing ALTGRD and FONCTIONS
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        adajust_layer {
+            if-layers = <FONCTIONS ALTGRD>;
+            then-layer = <BT_OUT_SYS>;
+        };
+    };
 
     behaviors {
         mmv {
@@ -90,7 +90,7 @@
                  &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &kp FR_COMMA     &kp FR_DOT       &kp FR_EXCL      &sl LAFAYETTE    &kp RSHFT
 // &kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &kp SPACE &lt NAVI  &kp LCTRL     &kp ENTER        &kp RCTRL        &kp SPACE        &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 // &kp C_MUTE                        &kp LCTRL        &kp LEFT_GUI     &kp LEFT_ALT     &mo 1               &kp SPACE     &kp ENTER        &kp SPACE        &kp ENTER        &mo 2            &kp RIGHT_SHIFT  &kp DELETE
-&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &kp SPACE        &kp LCTRL     &kp ENTER        &kp RCTRL        &kp SPACE        &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
+&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &kp SPACE        &kp LCTRL        &kp ENTER        &kp RCTRL        &kp SPACE        &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 
             >;
 
