@@ -6,26 +6,56 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#include "locale/keys_fr.h"
+
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 #define U_MS_U &mmv MOVE_UP
 #define U_MS_D &mmv MOVE_DOWN
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  //  600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+
+
+
+// define BASE 0 ...
+// https://github.com/infused-kim/zmk-config-sofle/blob/main/config/sofle.keymap
+#define BASE 0
+#define ALTGRD 1
+#define LAFAYETTE 2
+#define NAVI 3
+#define FONCTIONS 4
+#define BT_OUT_SYS 5
+
+#define KP_COMMA_SEM     &kp COMMA &sk LEFT_SHIFT &kp SEMICOLON  // , / ;
+#define KP_DOT_CLN       &kp DOT   &sk LEFT_SHIFT &kp COLON      // . / :
+#define KP_EXCL_QST      &kp EXCL  &sk LEFT_SHIFT &kp QUESTION   // ! / ?
+
+#define KP_FR_COMMA_SEMI &kp FR_COMMA &sk LEFT_SHIFT &kp FR_SEMICOLON  // , / ;
+#define KP_FR_DOT_COLON  &kp FR_DOT   &sk LEFT_SHIFT &kp FR_COLON      // . / :
+#define KP_FR_EXCL_QUEST &kp FR_EXCL  &sk LEFT_SHIFT &kp FR_QUESTION   // ! / ?
+
 
 / {
+
+   // Activate BT_OUT_SYS layer by pressing ALTGRD and FONCTIONS
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        adajust_layer {
+            if-layers = <FONCTIONS ALTGRD>;
+            then-layer = <BT_OUT_SYS>;
+        };
+    };
+
     behaviors {
         mmv {
             acceleration-exponent = <1>;      // 1
-            time-to-max-speed-ms = <900>;    // 40
+            time-to-max-speed-ms = <900>;     // 40
             delay-ms = <0>;                   // 0
         };
 
         msc {
             acceleration-exponent = <1>;      // 0
-            time-to-max-speed-ms = <400>;      // 500
+            time-to-max-speed-ms = <400>;     // 500
             delay-ms = <0>;                   //   10
         };
     };
@@ -41,42 +71,131 @@
     keymap {
         compatible = "zmk,keymap";
 
-        layer0 {
+        Base {
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |            |      ESC       |        1       |        2       |        3       |        4       |        5       |   UP_ARROW     |        6       |        7       |        8       |        9       |        0       |        \       |
+// |            |      TAB       |        A       |        Z       |        E       |        R       |        T       |   DOWN_ARROW   |        Y       |        U       |        I       |        O       |        P       |      BKSPC     |
+// |            |     CAPS       |        Q       |        S       |        D       |        F       |        G       |   LEFT_ARROW   |        H       |        J       |        K       |        L       |        M       |      ENTER     |
+// |            |     LSHFT      |        W       |        X       |        C       |        V       |        B       |   RIGHT_ARROW  |        N       |      ,  ;      |       . :      |       ! ?      | &sl LAFAYETTE  |      SHIFT     |
+// | C_MUTE     |                | &mo FONCTIONS  |    LEFT_GUI    |    LEFT_ALT    | SPACE &lt NAVI |     LCTRL      |      ENTER     |     RCTRL      |     SPACE      |  &mo ALTGRD    |      K_CMENU   | &mo FONCTIONS  |                |
+
+// | CAPS    | ALT     | GUI/-         | SPACE|FONCTIONS/[       |  |ALTGRD/] | ENTER        |  GUI/=         |  ALT    | CTRL   |
+//  &kp CLCK  &kp LALT  &mt LGUI MINUS  &kp SPACE &lt 3 LBKT      &lt 2 RBKT   &kp RET        &mt RGUI EQUAL   &kp RALT  &kp RCTRL
+
             bindings = <
-&kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6     &kp N7     &kp N8     &kp N9           &kp N0      &kp BACKSPACE
-&kp TAB     &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y      &kp U      &kp I      &kp O            &kp P       &kp BSLH
-&kp CAPS    &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H      &kp J      &kp K      &kp L            &kp SEMI    &kp APOS
-&kp LSHFT   &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N      &kp M      &kp COMMA  &kp DOT          &kp FSLH    &kp ENTER
-&kp C_MUTE  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &mo 1   &kp SPACE    &kp ENTER        &kp SPACE  &kp ENTER  &mo 2      &kp RIGHT_SHIFT  &kp DELETE
+                 &kp ESC          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp UP_ARROW     &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp DELETE
+                 &kp TAB          &kp FR_A         &kp FR_Z         &kp FR_E         &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
+                 &kp CAPS         &kp FR_Q         &kp FR_S         &kp FR_D         &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
+                 &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         KP_FR_COMMA_SEMI KP_FR_DOT_COLON  KP_FR_EXCL_QUEST &sl LAFAYETTE    &kp RSHFT
+&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &kp SPACE &lt NAVI  &kp LCTRL     &kp ENTER        &kp RCTRL        &kp SPACE        &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "LAYER0";
+            display-name = "Base";
         };
 
-        layer_1 {
-            bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
-            >;
+        AltGround {
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |            |                |       €        |        ~       |        #       |        {       |        [       |   UP_ARROW     |        |       |        `       |       \        |        ^       |        @       |                |
+// |            |                |       ^        |        <       |        >       |        $       |        %       |   DOWN_ARROW   |        +       |        `       |       '        |        "       |        *       |                |
+// |            |                |       {        |        (       |        )       |        }       |        =       |   LEFT_ARROW   |        -       |        _       |       \        |        |       |        /       |                |
+// |            |                |       ~        |        [       |        ]       |        @       |        #       |   RIGHT_ARROW  |        °       |        ;       |       :        |        &       |        @       |                |
+// | C_MUTE     |                |                |                |                |                |                |      ENTER     |                |                |                |                |                |                |
 
-            display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        layer_2 {
             bindings = <
-&kp TILDE  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &mmv MOVE_UP     &kp F6  &kp F7  &kp F8      &kp F9     &kp F10      &trans
-&trans     &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans        &trans          &mmv MOVE_DOWN   &trans  &trans  &kp F11     &kp F12    &kp UNDER    &kp PLUS
-&trans     &out OUT_USB  &out OUT_BLE    &trans        &trans        &trans          &mmv MOVE_LEFT   &trans  &trans  &trans      &trans     &kp LBRC     &kp RBRC
-&trans     &sys_reset    &trans          &bootloader   &trans        &trans          &mmv MOVE_RIGHT  &trans  &trans  &sys_reset  &soft_off  &bootloader  &trans
-&trans     &trans        &trans          &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
+                 &trans            &kp FR_EURO     &kp FR_TILDE     &kp FR_HASH      &kp FR_LBRC      &kp FR_LBKT      &kp UP_ARROW     &kp FR_PIPE      &kp FR_GRAVE     &kp FR_BACKSLASH &kp FR_CARET     &kp FR_AT        &trans
+                 &trans            &kp FR_CARET    &kp FR_LT        &kp FR_GT        &kp FR_DOLLAR    &kp FR_PERCENT   &kp DOWN_ARROW   &kp FR_PLUS      &kp FR_GRAVE     &kp FR_APOS      &kp FR_DQT       &kp FR_ASTERISK  &trans
+                 &trans            &kp FR_LBRC     &kp FR_LPAR      &kp FR_RPAR      &kp FR_RBRC      &kp FR_EQUAL     &kp LEFT_ARROW   &kp FR_MINUS     &kp FR_UNDER     &kp FR_BACKSLASH &kp FR_PIPE      &kp FR_SLASH     &trans
+                 &trans            &kp FR_TILDE    &kp FR_LBKT      &kp FR_RBKT      &kp FR_AT        &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DEGREE    &kp FR_SEMI      &kp FR_COLON     &kp FR_AMPERSAND &kp FR_AT        &trans
+&kp C_MUTE                         &trans          &trans           &trans           &trans           &trans           &kp ENTER        &trans           &trans           &trans           &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
+            display-name = "AltGr";
+        };
+
+        Lafayette {
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |            |                |       &        |       é        |       "        |       '        |        (       |   UP_ARROW     |       -        |       è        |       _        |        ç       |        à       |                |
+// |            |                |       à        |       é        |       è        |       €        |        ¨       |   DOWN_ARROW   |       ^        |       ù        |       _        |        "       |        £       |                |
+// |            |                |       â        |       $        |       ê        |       &        |        (       |   LEFT_ARROW   |       )        |       û        |       î        |        ô       |        µ       |                |
+// |            |                |       ä        |       æ        |       ç        |       ë        |        #       |   RIGHT_ARROW  |       •        |       ü        |       ï        |        ö       |        œ       |                |
+// | C_MUTE     |                |                |                |                |                |                |      ENTER     |                |                |                |                |                |                |
+
+            bindings = <
+                 &trans           &kp FR_AMPERSAND &kp FR_E_ACUTE   &kp FR_DQT       &kp FR_SQT       &kp FR_LPAR      &kp UP_ARROW     &kp FR_UNDER     &kp FR_E_GRAVE   &kp FR_UNDER     &kp FR_C_CEDILLA &kp FR_A_GRAVE    &trans
+                 &trans           &kp FR_A_GRAVE   &kp FR_E_ACUTE   &kp FR_E_GRAVE   &kp FR_EURO      &kp FR_UMLAUT    &kp DOWN_ARROW   &kp FR_CARET     &kp FR_U_GRAVE   &kp FR_UNDER     &kp FR_DQT       &kp FR_POUND_SIGN &trans
+                 &trans           &kp FR_A         &kp FR_DOLLAR    &kp FR_E         &kp FR_AMPERSAND &kp FR_LPAR      &kp LEFT_ARROW   &kp FR_RPAR      &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_MICRO      &trans
+                 &trans           &kp FR_A         &kp FR_A         &kp FR_C_CEDILLA &kp FR_E         &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DOT       &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_O          &trans
+&kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &kp ENTER        &trans           &trans           &trans           &trans           &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+            display-name = "Lafayette";
+        };
+
+        // TODO: à compléter
+        Navigation {
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
+// |            |                |     TAB        |      HOME      |    UP_ARROW    |      END       |    LC(HOME)    |   MOVE_DOWN    |       +        |       7        |       8        |       9        |        *       |                |
+// |            |                |     CAPS       |   LEFT_ARROW   |   DOWN_ARROW   |  RIGHT_ARROW   |    LC(END)     |   MOVE_RIGHT   |       -        |       4        |       5        |       6        |        /       |                |
+// |            |                |                |                |                |                |                |   MOVE_LEFT    |       0        |       1        |       2        |       3        |        .       |                |
+// | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
+
+            bindings = <
+                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &none
+                 &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp LC(HOME)     &mmv MOVE_DOWN   &kp KP_PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &trans
+                 &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp LC(END)      &mmv MOVE_RIGHT  &kp KP_MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE    &trans
+                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_LEFT   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &trans
+&kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+            display-name = "Navigation";
+        };
+
+
+        // TODO: à compléter
+        Fonctions {
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |            |       ²        |       F1       |       F2       |       F3       |       F4       |       F5       |   MOVE_UP      |       F6       |       F7       |       F8       |       F9       |       F10      |     INSERT     |
+// |            |                |       F11      |       F12      |                |                |                |   MOVE_DOWN    |                |                |                |                |  PRINTSCREEN   |     INSERT     |
+// |            |                |                |                |                |                |                |   MOVE_LEFT    |                |                |                |                |                |                |
+// |            |                |     RGB_OFF    |      RGB_ON    |     RGB_EFF    |    RGB_EFR     |     RGB_SPI    |   MOVE_RIGHT   |    RGB_SPD     |    RGB_HUI     |     RGB_HUD    |     RGB_BRI    |     RGB_BRD    |                |
+// | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
+
+            bindings = <
+                 &kp FR_SQUARE    &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp INSERT
+                 &trans           &kp F11          &kp F12          &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &none            &none            &kp PRINTSCREEN  &kp INSERT
+                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &trans
+                 &trans           &rgb_ug RGB_OFF  &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &mmv MOVE_RIGHT  &rgb_ug RGB_SPD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans
+&kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            display-name = "Fn";
+        };
+
+        // TODO: à compléter / le F n'est là que pour tester
+        BtOutSys {
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
+// |            |                |                |                |                |                |                |   MOVE_DOWN    |                |                |                |                |                |                |
+// |            |                |                |                |                |        F       |                |   MOVE_RIGHT   |                |                |                |                |                |                |
+// |            |                |                |                |                |                |                |   MOVE_LEFT    |                |                |                |                |                |                |
+// | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
+
+            bindings = <
+                 &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &none
+                 &none            &bt BT_CLR       &bt BT_CLR_ALL   &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &kp F11          &kp F12          &kp UNDER        &kp PLUS
+                 &none            &out OUT_USB     &out OUT_BLE     &none            &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &kp LBRC         &kp RBRC
+                 &none            &sys_reset       &none            &bootloader      &none            &none            &mmv MOVE_RIGHT  &none            &none            &sys_reset       &soft_off        &bootloader      &none
+&trans                            &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+            display-name = "BtOutSys";
         };
     };
 };
