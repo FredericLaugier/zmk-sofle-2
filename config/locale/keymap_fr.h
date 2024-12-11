@@ -154,4 +154,4 @@
 #define FR_RCBR             RA(FR_EQUAL)        // }
 // Row 2
 #define FR_EURO             RA(E)             // €
-#define FR_CURR             RA(FR_DLR)        // ¤
+#define FR_CURR             RA(FR_DOLLAR)     // ¤

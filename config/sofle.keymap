@@ -38,14 +38,14 @@
 
 / {
 
-   // Activate BT_OUT_SYS layer by pressing ALTGRD and FONCTIONS
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        adajust_layer {
-            if-layers = <FONCTIONS ALTGRD>;
-            then-layer = <BT_OUT_SYS>;
-        };
-    };
+//    // Activate BT_OUT_SYS layer by pressing ALTGRD and FONCTIONS
+//     conditional_layers {
+//         compatible = "zmk,conditional-layers";
+//         adajust_layer {
+//             if-layers = <FONCTIONS ALTGRD>;
+//             then-layer = <BT_OUT_SYS>;
+//         };
+//     };
 
     behaviors {
         mmv {
@@ -178,25 +178,25 @@
             display-name = "Fn";
         };
 
-        // TODO: à compléter / le F n'est là que pour tester
-        BtOutSys {
-// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
-// |            |                |                |                |                |                |                |   MOVE_DOWN    |                |                |                |                |                |                |
-// |            |                |                |                |                |        F       |                |   MOVE_RIGHT   |                |                |                |                |                |                |
-// |            |                |                |                |                |                |                |   MOVE_LEFT    |                |                |                |                |                |                |
-// | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
+//         // TODO: à compléter / le F n'est là que pour tester
+//         BtOutSys {
+// // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// // |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
+// // |            |                |                |                |                |                |                |   MOVE_DOWN    |                |                |                |                |                |                |
+// // |            |                |                |                |                |        F       |                |   MOVE_RIGHT   |                |                |                |                |                |                |
+// // |            |                |                |                |                |                |                |   MOVE_LEFT    |                |                |                |                |                |                |
+// // | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
 
-            bindings = <
-                 &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &none
-                 &none            &bt BT_CLR       &bt BT_CLR_ALL   &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &kp F11          &kp F12          &kp UNDER        &kp PLUS
-                 &none            &out OUT_USB     &out OUT_BLE     &none            &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &kp LBRC         &kp RBRC
-                 &none            &sys_reset       &none            &bootloader      &none            &none            &mmv MOVE_RIGHT  &none            &none            &sys_reset       &soft_off        &bootloader      &none
-&trans                            &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
-            >;
+//             bindings = <
+//                  &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &none
+//                  &none            &bt BT_CLR       &bt BT_CLR_ALL   &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &kp F11          &kp F12          &kp UNDER        &kp PLUS
+//                  &none            &out OUT_USB     &out OUT_BLE     &none            &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &kp LBRC         &kp RBRC
+//                  &none            &sys_reset       &none            &bootloader      &none            &none            &mmv MOVE_RIGHT  &none            &none            &sys_reset       &soft_off        &bootloader      &none
+// &trans                            &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+//             >;
 
-            sensor-bindings = <&scroll_encoder>;
-            display-name = "BtOutSys";
-        };
+//             sensor-bindings = <&scroll_encoder>;
+//             display-name = "BtOutSys";
+//         };
     };
 };
