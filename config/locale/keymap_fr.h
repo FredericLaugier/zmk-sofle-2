@@ -113,7 +113,7 @@
 #define FR_8                LS(FR_UNDER)      // 8
 #define FR_9                LS(FR_C_CEDILLA)  // 9
 #define FR_0                LS(FR_A_GRAVE)    // 0
-#define FR_DEGREE           LS(FR_RPRN)       // °
+#define FR_DEGRE            LS(FR_RPAR)       // °
 #define FR_PLUS             LS(FR_EQUAL)      // +
 // Row 2
 #define FR_UMLAUT           LS(FR_CIRC)       // ¨ (dead)
@@ -150,7 +150,7 @@
 #define FR_GRAVE            RA(FR_E_GRAVE)    // ` (dead)
 #define FR_BACKSLASH        RA(FR_UNDER)      // (backslash)
 #define FR_AT               RA(FR_A_GRAVE)    // @
-#define FR_RBKT             RA(FR_RPRN)       // ]
+#define FR_RBKT             RA(FR_RPAR)       // ]
 #define FR_RCBR             RA(FR_EQUAL)        // }
 // Row 2
 #define FR_EURO             RA(E)             // €
