@@ -6,7 +6,8 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#include "locale/keys_fr.h"
+// #include "locale/keys_fr.h"
+#include "locale/keymap_fr.h"
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
@@ -103,10 +104,10 @@
 // | C_MUTE     |                |                |                |                |                |                |      ENTER     |                |                |                |                |                |                |
 
             bindings = <
-                 &trans            &kp FR_EURO     &kp FR_TILDE     &kp FR_HASH      &kp FR_LBRC      &kp FR_LBKT      &kp UP_ARROW     &kp FR_PIPE      &kp FR_GRAVE     &kp FR_BACKSLASH &kp FR_CARET     &kp FR_AT        &trans
-                 &trans            &kp FR_CARET    &kp FR_LT        &kp FR_GT        &kp FR_DOLLAR    &kp FR_PERCENT   &kp DOWN_ARROW   &kp FR_PLUS      &kp FR_GRAVE     &kp FR_APOS      &kp FR_DQT       &kp FR_ASTERISK  &trans
-                 &trans            &kp FR_LBRC     &kp FR_LPAR      &kp FR_RPAR      &kp FR_RBRC      &kp FR_EQUAL     &kp LEFT_ARROW   &kp FR_MINUS     &kp FR_UNDER     &kp FR_BACKSLASH &kp FR_PIPE      &kp FR_SLASH     &trans
-                 &trans            &kp FR_TILDE    &kp FR_LBKT      &kp FR_RBKT      &kp FR_AT        &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DEGREE    &kp FR_SEMI      &kp FR_COLON     &kp FR_AMPERSAND &kp FR_AT        &trans
+                 &trans            &kp FR_EURO     &kp FR_TILDE     &kp FR_HASH      &kp FR_LCBR      &kp FR_LBKT      &kp UP_ARROW     &kp FR_PIPE      &kp FR_GRAVE     &kp FR_BACKSLASH &kp FR_CIRC      &kp FR_AT        &trans
+                 &trans            &kp FR_CIRC     &kp FR_LT        &kp FR_GT        &kp FR_DOLLAR    &kp FR_PERCENT   &kp DOWN_ARROW   &kp FR_PLUS      &kp FR_GRAVE     &kp FR_QUOT      &kp FR_DQUOT     &kp FR_ASTERISK  &trans
+                 &trans            &kp FR_LCBR     &kp FR_LPAR      &kp FR_RPAR      &kp FR_RCBR      &kp FR_EQUAL     &kp LEFT_ARROW   &kp FR_MINUS     &kp FR_UNDER     &kp FR_BACKSLASH &kp FR_PIPE      &kp FR_SLASH     &trans
+                 &trans            &kp FR_TILDE    &kp FR_LBKT      &kp FR_RBKT      &kp FR_AT        &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DEGREE    &kp FR_SEMICOLON &kp FR_COLON     &kp FR_AMPERSAND &kp FR_AT        &trans
 &kp C_MUTE                         &trans          &trans           &trans           &trans           &trans           &kp ENTER        &trans           &trans           &trans           &trans           &trans
             >;
 
@@ -123,8 +124,8 @@
 // | C_MUTE     |                |                |                |                |                |                |      ENTER     |                |                |                |                |                |                |
 
             bindings = <
-                 &trans           &kp FR_AMPERSAND &kp FR_E_ACUTE   &kp FR_DQT       &kp FR_SQT       &kp FR_LPAR      &kp UP_ARROW     &kp FR_UNDER     &kp FR_E_GRAVE   &kp FR_UNDER     &kp FR_C_CEDILLA &kp FR_A_GRAVE    &trans
-                 &trans           &kp FR_A_GRAVE   &kp FR_E_ACUTE   &kp FR_E_GRAVE   &kp FR_EURO      &kp FR_UMLAUT    &kp DOWN_ARROW   &kp FR_CARET     &kp FR_U_GRAVE   &kp FR_UNDER     &kp FR_DQT       &kp FR_POUND_SIGN &trans
+                 &trans           &kp FR_AMPERSAND &kp FR_E_ACUTE   &kp FR_DQUOT     &kp FR_SQUOT     &kp FR_LPAR      &kp UP_ARROW     &kp FR_UNDER     &kp FR_E_GRAVE   &kp FR_UNDER     &kp FR_C_CEDILLA &kp FR_A_GRAVE    &trans
+                 &trans           &kp FR_A_GRAVE   &kp FR_E_ACUTE   &kp FR_E_GRAVE   &kp FR_EURO      &kp FR_UMLAUT    &kp DOWN_ARROW   &kp FR_CIRC      &kp FR_U_GRAVE   &kp FR_UNDER     &kp FR_DQUOT     &kp FR_POUND_SIGN &trans
                  &trans           &kp FR_A         &kp FR_DOLLAR    &kp FR_E         &kp FR_AMPERSAND &kp FR_LPAR      &kp LEFT_ARROW   &kp FR_RPAR      &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_MICRO      &trans
                  &trans           &kp FR_A         &kp FR_A         &kp FR_C_CEDILLA &kp FR_E         &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DOT       &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_O          &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &kp ENTER        &trans           &trans           &trans           &trans           &trans
