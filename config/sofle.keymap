@@ -57,14 +57,14 @@
         msc {
             acceleration-exponent = <1>;      // 0
             time-to-max-speed-ms = <400>;     // 500
-            delay-ms = <0>;                   //   10
+            delay-ms = <0>;                   // 10
         };
 
         space_navi_tap: behavior_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <TAP_MS>;
+            tapping-term-ms = <200>;
             bindings = <&mo NAVI>, <&kp SPACE>;
         };
     };
