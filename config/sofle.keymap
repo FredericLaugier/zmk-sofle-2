@@ -35,6 +35,9 @@
 // #define KP_FR_DOT_COLON  &kp FR_DOT   &sk LEFT_SHIFT &kp FR_COLON      // . / :
 // #define KP_FR_EXCL_QUEST &kp FR_EXCL  &sk LEFT_SHIFT &kp FR_QUESTION   // ! / ?
 
+#define MT_FR_COMMA_SEMI &mt FR_SEMICOLON FR_COMMA
+#define MT_FR_DOT_COLON  &mt FR_COLON FR_DOT
+#define MT_FR_EXCL_QUEST &mt FR_QUESTION FR_EXCL
 
 / {
 
@@ -166,7 +169,7 @@
     // TODO: caps & return / long tap pour ,.! vers ;:?  FR_COMMA FR_SEMICOLON
         Base {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |            |      ESC       |        1       |        2       |        3       |        4       |        5       |   UP_ARROW     |        6       |        7       |        8       |        9       |        0       |        \       |
+// |            |      ESC       |        1       |        2       |        3       |        4       |        5       |   UP_ARROW     |        6       |        7       |        8       |        9       |        0       |      DELETE    |
 // |            |      TAB       |        A       |        Z       |        E       |        R       |        T       |   DOWN_ARROW   |        Y       |        U       |        I       |        O       |        P       |      BKSPC     |
 // |            |     CAPS       |        Q       |        S       |        D       |        F       |        G       |   LEFT_ARROW   |        H       |        J       |        K       |        L       |        M       |      ENTER     |
 // |            |     LSHFT      |        W       |        X       |        C       |        V       |        B       |   RIGHT_ARROW  |        N       |      ,  ;      |       . :      |       ! ?      | &sl LAFAYETTE  |      SHIFT     |
@@ -176,7 +179,7 @@
                  &kp ESC          &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_4         &kp FR_5         &kp UP_ARROW     &kp FR_6         &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_0         &kp DELETE
                  &kp TAB          &kp FR_A         &kp FR_Z         &kp FR_E         &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
                  &kp CAPS         &kp FR_Q         &kp FR_S         &kp FR_D         &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
-                 &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N  &mt FR_COMMA FR_SEMICOLON &kp FR_DOT       &kp FR_EXCL      &sl LAFAYETTE    &kp RSHFT
+                 &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         MT_FR_COMMA_SEMI MT_FR_DOT_COLON  MT_FR_EXCL_QUEST &sl LAFAYETTE    &kp RSHFT
 &kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &lt NAVI SPACE   &kp LCTRL        &kp ENTER        &kp RCTRL        &lt NAVI SPACE   &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 
             >;
