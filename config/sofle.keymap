@@ -134,35 +134,35 @@
             // };
 
 
-            a_circumflex: macro {
+           a_circumflex: a_circumflex{
                 bindings = <&kp FR_CIRC &kp FR_A>;
             };
-            e_circumflex: macro {
+            e_circumflex: e_circumflex{
                 bindings = <&kp FR_CIRC &kp FR_E>;
             };
-            i_circumflex: macro {
+            i_circumflex: i_circumflex{
                 bindings = <&kp FR_CIRC &kp FR_I>;
             };
-            o_circumflex: macro {
+            o_circumflex: o_circumflex{
                 bindings = <&kp FR_CIRC &kp FR_O>;
             };
-            u_circumflex: macro {
+            u_circumflex: u_circumflex{
                 bindings = <&kp FR_CIRC &kp FR_U>;
             };
 
-            a_diaeresis: macro {
+            a_diaeresis: a_diaeresis{
                 bindings = <&kp FR_UMLAUT &kp FR_A>;
             };
-            e_diaeresis: macro {
+            e_diaeresis: e_diaeresis{
                 bindings = <&kp FR_UMLAUT &kp FR_E>;
             };
-            i_diaeresis: macro {
+            i_diaeresis: i_diaeresis{
                 bindings = <&kp FR_UMLAUT &kp FR_I>;
             };
-            o_diaeresis: macro {
+            o_diaeresis: o_diaeresis{
                 bindings = <&kp FR_UMLAUT &kp FR_O>;
             };
-            u_diaeresis: macro {
+            u_diaeresis: u_diaeresis{
                 bindings = <&kp FR_UMLAUT &kp FR_U>;
             };
         };
