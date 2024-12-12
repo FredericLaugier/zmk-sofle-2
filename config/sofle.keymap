@@ -60,13 +60,80 @@
             delay-ms = <0>;                   // 10
         };
 
-        // space_navi_tap: behavior_layer_tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-preferred";
-        //     tapping-term-ms = <200>;
-        //     bindings = <&mo 3>, <&kp SPACE>;
-        // };
+        macros {
+            uc_a_circumflex: uc_a_circumflex {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 2C &kp 2C>;
+            };
+
+            uc_e_circumflex: uc_e_circumflex {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 2C &kp 3A>;
+            };
+
+            uc_i_circumflex: uc_i_circumflex {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 2C &kp 3E>;
+            };
+
+            uc_o_circumflex: uc_o_circumflex {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 2C &kp 4F>;
+            };
+
+            uc_u_circumflex: uc_u_circumflex {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 2C &kp 55>;
+            };
+
+            uc_a_diaeresis: uc_a_diaeresis {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp E &kp 4>;
+            };
+
+            uc_e_diaeresis: uc_e_diaeresis {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp E &kp B>;
+            };
+
+            uc_i_diaeresis: uc_i_diaeresis {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp EF>;
+            };
+
+            uc_o_diaeresis: uc_o_diaeresis {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp F6>;
+            };
+
+            uc_u_diaeresis: uc_u_diaeresis {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp F &kp C>;
+            };
+
+            uc_ae: uc_ae {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp E &kp 6>;
+            };
+
+            uc_oe: uc_oe {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 1 &kp 5 &kp 3>;
+            };
+        };
+
     };
 
     scroll_encoder: scroll_encoder {
@@ -137,8 +204,8 @@
             bindings = <
                  &trans           &kp FR_AMPERSAND &kp FR_E_ACUTE   &kp FR_DQUOT     &kp FR_SQUOT     &kp FR_LPAR      &kp UP_ARROW     &kp FR_UNDER     &kp FR_E_GRAVE   &kp FR_UNDER     &kp FR_C_CEDILLA &kp FR_A_GRAVE    &trans
                  &trans           &kp FR_A_GRAVE   &kp FR_E_ACUTE   &kp FR_E_GRAVE   &kp FR_EURO      &kp FR_UMLAUT    &kp DOWN_ARROW   &kp FR_CIRC      &kp FR_U_GRAVE   &kp FR_UNDER     &kp FR_DQUOT     &kp FR_POUND_SIGN &trans
-                 &trans           &kp FR_A         &kp FR_DOLLAR    &kp FR_E         &kp FR_AMPERSAND &kp FR_LPAR      &kp LEFT_ARROW   &kp FR_RPAR      &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_MICRO      &trans
-                 &trans           &kp FR_A         &kp FR_A         &kp FR_C_CEDILLA &kp FR_E         &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DOT       &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_O          &trans
+                 &trans           &uc_a_circumflex &kp FR_DOLLAR    &uc_e_circumflex &kp FR_AMPERSAND &kp FR_LPAR      &kp LEFT_ARROW   &kp FR_RPAR      &uc_u_circumflex &uc_i_circumflex &uc_o_circumflex &kp FR_MICRO      &trans
+                 &trans           &uc_a_diaeresis  &uc_ae           &kp FR_C_CEDILLA &kp FR_E         &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DOT       &uc_u_diaeresis  &uc_i_diaeresis  &uc_o_diaeresis  &uc_oe            &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &kp ENTER        &trans           &trans           &trans           &trans           &trans
             >;
 
