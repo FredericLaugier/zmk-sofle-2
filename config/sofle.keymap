@@ -134,12 +134,12 @@
                 bindings = <&kp FR_UMLAUT &kp FR_U>;
             };
 
-            comma_semicolon => behavior(mod_tap(
-                base_behavior = &kp FR_COMMA,  // Tapped key: Comma
-                mod_behavior = &kp LSFT(FR_SEMICOLON), // Held key with Shift: Semicolon
-                mod = &mod LSFT, // The modifier key that gets held: Shift
-                hold_threshold = 200 // Optional: Threshold for detecting a hold
-            )),
+            comma_semicolon: comma_semicolon {
+                compatible = "zmk,behavior-hold-tap";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>; // Adjust as needed
+                bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
+            };
         };
 
     };
