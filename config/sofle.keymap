@@ -135,34 +135,74 @@
 
 
            a_circumflex: a_circumflex{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
                 bindings = <&kp FR_CIRC &kp FR_A>;
             };
             e_circumflex: e_circumflex{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
                 bindings = <&kp FR_CIRC &kp FR_E>;
             };
             i_circumflex: i_circumflex{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
                 bindings = <&kp FR_CIRC &kp FR_I>;
             };
             o_circumflex: o_circumflex{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
                 bindings = <&kp FR_CIRC &kp FR_O>;
             };
             u_circumflex: u_circumflex{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
                 bindings = <&kp FR_CIRC &kp FR_U>;
             };
 
             a_diaeresis: a_diaeresis{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
                 bindings = <&kp FR_UMLAUT &kp FR_A>;
             };
             e_diaeresis: e_diaeresis{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
                 bindings = <&kp FR_UMLAUT &kp FR_E>;
             };
             i_diaeresis: i_diaeresis{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
                 bindings = <&kp FR_UMLAUT &kp FR_I>;
             };
             o_diaeresis: o_diaeresis{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
                 bindings = <&kp FR_UMLAUT &kp FR_O>;
             };
             u_diaeresis: u_diaeresis{
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <30>;
+                tap-ms = <40>;
                 bindings = <&kp FR_UMLAUT &kp FR_U>;
             };
         };
