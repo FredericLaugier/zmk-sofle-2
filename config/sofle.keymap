@@ -16,7 +16,7 @@
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
 
-
+#define TAP_MS 200
 
 // define BASE 0 ...
 // https://github.com/infused-kim/zmk-config-sofle/blob/main/config/sofle.keymap
@@ -59,6 +59,14 @@
             time-to-max-speed-ms = <400>;     // 500
             delay-ms = <0>;                   //   10
         };
+
+        space_navi_tap: behavior_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <TAP_MS>;
+            bindings = <&mo NAVI>, <&kp SPACE>;
+        };
     };
 
     scroll_encoder: scroll_encoder {
@@ -90,7 +98,7 @@
                  &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &kp FR_COMMA     &kp FR_DOT       &kp FR_EXCL      &sl LAFAYETTE    &kp RSHFT
 // &kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &kp SPACE &lt NAVI  &kp LCTRL     &kp ENTER        &kp RCTRL        &kp SPACE        &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 // &kp C_MUTE                        &kp LCTRL        &kp LEFT_GUI     &kp LEFT_ALT     &mo 1               &kp SPACE     &kp ENTER        &kp SPACE        &kp ENTER        &mo 2            &kp RIGHT_SHIFT  &kp DELETE
-&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &kp SPACE        &kp LCTRL        &kp ENTER        &kp RCTRL        &kp SPACE        &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
+&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     space_navi_tap   &kp LCTRL        &kp ENTER        &kp RCTRL        &kp SPACE        &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 
             >;
 
