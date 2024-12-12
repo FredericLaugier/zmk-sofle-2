@@ -62,7 +62,7 @@
 
         macros {
 
-           a_circumflex: a_circumflex{
+            a_circumflex: a_circumflex{
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 wait-ms = <30>;
@@ -133,6 +133,13 @@
                 tap-ms = <40>;
                 bindings = <&kp FR_UMLAUT &kp FR_U>;
             };
+
+            comma_semicolon => behavior(mod_tap(
+                base_behavior = &kp FR_COMMA,  // Tapped key: Comma
+                mod_behavior = &kp LSFT(FR_SEMICOLON), // Held key with Shift: Semicolon
+                mod = &mod LSFT, // The modifier key that gets held: Shift
+                hold_threshold = 200 // Optional: Threshold for detecting a hold
+            )),
         };
 
     };
@@ -148,6 +155,7 @@
     keymap {
         compatible = "zmk,keymap";
 
+    // TODO: caps & return / long tap pour ,.! vers ;:?
         Base {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |      ESC       |        1       |        2       |        3       |        4       |        5       |   UP_ARROW     |        6       |        7       |        8       |        9       |        0       |        \       |
@@ -156,17 +164,12 @@
 // |            |     LSHFT      |        W       |        X       |        C       |        V       |        B       |   RIGHT_ARROW  |        N       |      ,  ;      |       . :      |       ! ?      | &sl LAFAYETTE  |      SHIFT     |
 // | C_MUTE     |                | &mo FONCTIONS  |    LEFT_GUI    |    LEFT_ALT    | SPACE &lt NAVI |     LCTRL      |      ENTER     |     RCTRL      |     SPACE      |  &mo ALTGRD    |      K_CMENU   | &mo FONCTIONS  |                |
 
-// | CAPS    | ALT     | GUI/-         | SPACE|FONCTIONS/[       |  |ALTGRD/] | ENTER        |  GUI/=         |  ALT    | CTRL   |
-//  &kp CLCK  &kp LALT  &mt LGUI MINUS  &kp SPACE &lt 3 LBKT      &lt 2 RBKT   &kp RET        &mt RGUI EQUAL   &kp RALT  &kp RCTRL
-
             bindings = <
                  &kp ESC          &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_4         &kp FR_5         &kp UP_ARROW     &kp FR_6         &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_0         &kp DELETE
                  &kp TAB          &kp FR_A         &kp FR_Z         &kp FR_E         &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
                  &kp CAPS         &kp FR_Q         &kp FR_S         &kp FR_D         &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
-                 &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &kp FR_COMMA     &kp FR_DOT       &kp FR_EXCL      &sl LAFAYETTE    &kp RSHFT
-// &kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &kp SPACE &lt NAVI  &kp LCTRL     &kp ENTER        &kp RCTRL        &kp SPACE        &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
-// &kp C_MUTE                        &kp LCTRL        &kp LEFT_GUI     &kp LEFT_ALT     &mo 1               &kp SPACE     &kp ENTER        &kp SPACE        &kp ENTER        &mo 2            &kp RIGHT_SHIFT  &kp DELETE
-&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT      &lt NAVI SPACE  &kp LCTRL        &kp ENTER        &kp RCTRL        &lt NAVI SPACE   &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
+                 &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &comma_semicolon &kp FR_DOT       &kp FR_EXCL      &sl LAFAYETTE    &kp RSHFT
+&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &lt NAVI SPACE   &kp LCTRL        &kp ENTER        &kp RCTRL        &lt NAVI SPACE   &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 
             >;
 
@@ -226,8 +229,8 @@
             bindings = <
                  &trans           &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &none
                  &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp PAGE_UP      &mmv MOVE_DOWN   &kp FR_PLUS      &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_ASTERISK  &trans
-                 &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_RIGHT  &kp FR_MINUS     &kp FR_4         &kp FR_5         &kp FR_6         &kp FR_SLASH     &trans
-                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_LEFT   &kp FR_0         &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_DOT       &trans
+                 &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_LEFT   &kp FR_MINUS     &kp FR_4         &kp FR_5         &kp FR_6         &kp FR_SLASH     &trans
+                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_RIGHT  &kp FR_0         &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_DOT       &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
 
