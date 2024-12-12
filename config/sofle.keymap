@@ -10,13 +10,13 @@
 #include "locale/keymap_fr.h"
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 200    // 10
 #define U_MS_U &mmv MOVE_UP
 #define U_MS_D &mmv MOVE_DOWN
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
 
-#define TAP_MS 200
+// #define TAP_MS 200
 
 // define BASE 0 ...
 // https://github.com/infused-kim/zmk-config-sofle/blob/main/config/sofle.keymap
@@ -27,13 +27,13 @@
 #define FONCTIONS 4
 #define BT_OUT_SYS 5
 
-#define KP_COMMA_SEM     &kp COMMA &sk LEFT_SHIFT &kp SEMICOLON  // , / ;
-#define KP_DOT_CLN       &kp DOT   &sk LEFT_SHIFT &kp COLON      // . / :
-#define KP_EXCL_QST      &kp EXCL  &sk LEFT_SHIFT &kp QUESTION   // ! / ?
+// #define KP_COMMA_SEM     &kp COMMA &sk LEFT_SHIFT &kp SEMICOLON  // , / ;
+// #define KP_DOT_CLN       &kp DOT   &sk LEFT_SHIFT &kp COLON      // . / :
+// #define KP_EXCL_QST      &kp EXCL  &sk LEFT_SHIFT &kp QUESTION   // ! / ?
 
-#define KP_FR_COMMA_SEMI &kp FR_COMMA &sk LEFT_SHIFT &kp FR_SEMICOLON  // , / ;
-#define KP_FR_DOT_COLON  &kp FR_DOT   &sk LEFT_SHIFT &kp FR_COLON      // . / :
-#define KP_FR_EXCL_QUEST &kp FR_EXCL  &sk LEFT_SHIFT &kp FR_QUESTION   // ! / ?
+// #define KP_FR_COMMA_SEMI &kp FR_COMMA &sk LEFT_SHIFT &kp FR_SEMICOLON  // , / ;
+// #define KP_FR_DOT_COLON  &kp FR_DOT   &sk LEFT_SHIFT &kp FR_COLON      // . / :
+// #define KP_FR_EXCL_QUEST &kp FR_EXCL  &sk LEFT_SHIFT &kp FR_QUESTION   // ! / ?
 
 
 / {
@@ -61,78 +61,6 @@
         };
 
         macros {
-            // uc_a_circumflex: uc_a_circumflex {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 2C &kp 2C>;
-            // };
-
-            // uc_e_circumflex: uc_e_circumflex {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 2C &kp 3A>;
-            // };
-
-            // uc_i_circumflex: uc_i_circumflex {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 2C &kp 3E>;
-            // };
-
-            // uc_o_circumflex: uc_o_circumflex {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 2C &kp 4F>;
-            // };
-
-            // uc_u_circumflex: uc_u_circumflex {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 2C &kp 55>;
-            // };
-
-            // uc_a_diaeresis: uc_a_diaeresis {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp E &kp 4>;
-            // };
-
-            // uc_e_diaeresis: uc_e_diaeresis {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp E &kp B>;
-            // };
-
-            // uc_i_diaeresis: uc_i_diaeresis {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp EF>;
-            // };
-
-            // uc_o_diaeresis: uc_o_diaeresis {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp F6>;
-            // };
-
-            // uc_u_diaeresis: uc_u_diaeresis {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp F &kp C>;
-            // };
-
-            // uc_ae: uc_ae {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 0 &kp E &kp 6>;
-            // };
-
-            // uc_oe: uc_oe {
-            //     compatible = "zmk,behavior-macro";
-            //     #binding-cells = <0>;
-            //     bindings = <&kp LCTRL &kp LSHFT &kp U>, <&kp N0 &kp 1 &kp 5 &kp 3>;
-            // };
-
 
            a_circumflex: a_circumflex{
                 compatible = "zmk,behavior-macro";
@@ -232,13 +160,13 @@
 //  &kp CLCK  &kp LALT  &mt LGUI MINUS  &kp SPACE &lt 3 LBKT      &lt 2 RBKT   &kp RET        &mt RGUI EQUAL   &kp RALT  &kp RCTRL
 
             bindings = <
-                 &kp ESC          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp UP_ARROW     &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp DELETE
+                 &kp ESC          &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_4         &kp FR_5         &kp UP_ARROW     &kp FR_6         &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_0         &kp DELETE
                  &kp TAB          &kp FR_A         &kp FR_Z         &kp FR_E         &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
                  &kp CAPS         &kp FR_Q         &kp FR_S         &kp FR_D         &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
                  &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &kp FR_COMMA     &kp FR_DOT       &kp FR_EXCL      &sl LAFAYETTE    &kp RSHFT
 // &kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &kp SPACE &lt NAVI  &kp LCTRL     &kp ENTER        &kp RCTRL        &kp SPACE        &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 // &kp C_MUTE                        &kp LCTRL        &kp LEFT_GUI     &kp LEFT_ALT     &mo 1               &kp SPACE     &kp ENTER        &kp SPACE        &kp ENTER        &mo 2            &kp RIGHT_SHIFT  &kp DELETE
-&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT      &lt NAVI SPACE  &kp LCTRL        &kp ENTER        &kp RCTRL        &kp SPACE        &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
+&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT      &lt NAVI SPACE  &kp LCTRL        &kp ENTER        &kp RCTRL        &lt NAVI SPACE   &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 
             >;
 
@@ -297,9 +225,9 @@
 
             bindings = <
                  &trans           &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &none
-                 &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp LC(HOME)     &mmv MOVE_DOWN   &kp KP_PLUS      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MULTIPLY  &trans
-                 &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp LC(END)      &mmv MOVE_RIGHT  &kp KP_MINUS     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DIVIDE    &trans
-                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_LEFT   &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &trans
+                 &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp PAGE_UP      &mmv MOVE_DOWN   &kp FR_PLUS      &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_ASTERISK  &trans
+                 &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_RIGHT  &kp FR_MINUS     &kp FR_4         &kp FR_5         &kp FR_6         &kp FR_SLASH     &trans
+                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_LEFT   &kp FR_0         &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_DOT       &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
 
@@ -319,8 +247,8 @@
 
             bindings = <
                  &kp FR_SQUARE    &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp INSERT
-                 &trans           &kp F11          &kp F12          &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &none            &none            &kp PRINTSCREEN  &kp INSERT
-                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &trans
+                 &trans           &kp F11          &kp F12          &none            &none            &kp LC(HOME)     &mmv MOVE_DOWN   &none            &none            &none            &none            &kp PRINTSCREEN  &kp INSERT
+                 &trans           &none            &none            &none            &none            &kp LC(END)      &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &trans
                  &trans           &rgb_ug RGB_OFF  &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &mmv MOVE_RIGHT  &rgb_ug RGB_SPD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
@@ -329,25 +257,25 @@
             display-name = "Fn";
         };
 
-//         // TODO: à compléter / le F n'est là que pour tester
-//         BtOutSys {
-// // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// // |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
-// // |            |                |                |                |                |                |                |   MOVE_DOWN    |                |                |                |                |                |                |
-// // |            |                |                |                |                |        F       |                |   MOVE_RIGHT   |                |                |                |                |                |                |
-// // |            |                |                |                |                |                |                |   MOVE_LEFT    |                |                |                |                |                |                |
-// // | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
+        // TODO: à compléter / le F n'est là que pour tester
+        BtOutSys {
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
+// |            |                |                |                |                |                |                |   MOVE_DOWN    |                |                |                |                |                |                |
+// |            |                |                |                |                |        F       |                |   MOVE_RIGHT   |                |                |                |                |                |                |
+// |            |                |                |                |                |                |                |   MOVE_LEFT    |                |                |                |                |                |                |
+// | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
 
-//             bindings = <
-//                  &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &none
-//                  &none            &bt BT_CLR       &bt BT_CLR_ALL   &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &kp F11          &kp F12          &kp UNDER        &kp PLUS
-//                  &none            &out OUT_USB     &out OUT_BLE     &none            &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &kp LBRC         &kp RBRC
-//                  &none            &sys_reset       &none            &bootloader      &none            &none            &mmv MOVE_RIGHT  &none            &none            &sys_reset       &soft_off        &bootloader      &none
-// &trans                            &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
-//             >;
+            bindings = <
+                 &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &none
+                 &none            &bt BT_CLR       &bt BT_CLR_ALL   &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &kp F11          &kp F12          &kp UNDER        &kp PLUS
+                 &none            &out OUT_USB     &out OUT_BLE     &none            &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &kp LBRC         &kp RBRC
+                 &none            &sys_reset       &none            &bootloader      &none            &none            &mmv MOVE_RIGHT  &none            &none            &sys_reset       &soft_off        &bootloader      &none
+&trans                            &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+            >;
 
-//             sensor-bindings = <&scroll_encoder>;
-//             display-name = "BtOutSys";
-//         };
+            sensor-bindings = <&scroll_encoder>;
+            display-name = "BtOutSys";
+        };
     };
 };

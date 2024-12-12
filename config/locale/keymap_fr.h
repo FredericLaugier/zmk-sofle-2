@@ -77,7 +77,7 @@
 #define FR_U_GRAVE          SQT                // ù
 #define FR_ASTERISK         STAR               // *
 // Row 4
-#define FR_LT               STAR               // <
+#define FR_LT               NON_US_BACKSLASH   // <
 #define FR_W                Z                  // W
 #define FR_X                X                  // X
 #define FR_C                C                  // C
