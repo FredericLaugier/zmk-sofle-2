@@ -134,12 +134,20 @@
                 bindings = <&kp FR_UMLAUT &kp FR_U>;
             };
 
+            // comma_semicolon: comma_semicolon {
+            //     compatible = "zmk,behavior-hold-tap";
+            //     #binding-cells = <2>;
+            //     tapping-term-ms = <200>; // Adjust as needed
+            //     bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
+            // };
+
             comma_semicolon: comma_semicolon {
                 compatible = "zmk,behavior-hold-tap";
                 #binding-cells = <2>;
-                tapping-term-ms = <200>; // Adjust as needed
-                bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
+                tapping-term-ms = <200>;  // Time to distinguish between tap and hold
+                bindings = <&kp KC_COMMA>, <&kp KC_SCLN>;
             };
+
         };
 
     };
