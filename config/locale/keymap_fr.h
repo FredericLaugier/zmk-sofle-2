@@ -123,7 +123,7 @@
 #define FR_MICRO            LS(FR_ASTERISK)   // µ
 // Row 4
 #define FR_GT               LS(FR_LT)         // >
-#define FR_QUESTION         LS(FR_COMMA)       // ?
+#define FR_QUESTION         LS(FR_COMMA)      // ?
 #define FR_DOT              LS(FR_SEMICOLON)  // .
 #define FR_SLASH            LS(FR_COLON)      // /
 #define FR_SECTION          LS(FR_EXCL)       // §
