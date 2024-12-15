@@ -75,7 +75,7 @@
 #define FR_L                L                  // L
 #define FR_M                SEMI               // M
 #define FR_U_GRAVE          SQT                // ù
-#define FR_ASTERISK         STAR               // *
+#define FR_ASTERISK         BACKSLASH          // STAR // *
 // Row 4
 #define FR_LT               NON_US_BACKSLASH   // <
 #define FR_W                Z                  // W

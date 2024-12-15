@@ -26,7 +26,8 @@
 #define LAFAYETTE 2
 #define NAVI 3
 #define FONCTIONS 4
-#define BT_OUT_SYS 5
+#define MOUSENAVI 5
+#define BT_OUT_SYS 6
 
 #define MY_COMMA_SEMI &mt FR_SEMICOLON FR_COMMA    // , / ;
 #define MY_DOT_COLON  &mt FR_COLON FR_DOT          // . / :
@@ -217,7 +218,7 @@
 // | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
 
             bindings = <
-                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &none
+                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &trans
                  &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp PAGE_UP      &mmv MOVE_DOWN   &kp FR_PLUS      &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_ASTERISK  &trans
                  &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_LEFT   &kp FR_MINUS     &kp FR_4         &kp FR_5         &kp FR_6         &kp FR_SLASH     &trans
                  &trans           &none            &none            &none            &none            &none            &mmv MOVE_RIGHT  &kp FR_0         &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_DOT       &trans
@@ -226,6 +227,27 @@
 
             sensor-bindings = <&scroll_encoder>;
             display-name = "Navigation";
+        };
+
+                // TODO: à compléter
+        MouseNavi {
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
+// |            |                |     TAB        |      HOME      |    UP_ARROW    |      END       |    LC(HOME)    |   MOVE_DOWN    |   SCRL_LEFT    |      LCLK      |    MOVE_UP     |     RCLK       |     SCRL_UP    |                |
+// |            |                |     CAPS       |   LEFT_ARROW   |   DOWN_ARROW   |  RIGHT_ARROW   |    LC(END)     |   MOVE_RIGHT   |   SCRL_RIGHT   |   MOVE_LEFT    |   MOVE_DOWN    |   MOVE_RIGHT   |    SCRL_DOWN   |                |
+// |            |                |                |                |                |                |                |   MOVE_LEFT    |                |       MB4      |      RCLK      |      MB5       |                |                |
+// | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
+
+            bindings = <
+                 &to 0            &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &trans
+                 &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp PAGE_UP      &mmv MOVE_DOWN   &msc SCRL_LEFT   &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &msc SCRL_UP     &trans
+                 &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_LEFT   &msc SCRL_RIGHT  &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &msc SCRL_DOWN   &trans
+                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_RIGHT  &none            &mkp MB4         &mkp MCLK        &mkp MB5         &none            &trans
+&kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+            display-name = "Mouse Nav";
         };
 
 

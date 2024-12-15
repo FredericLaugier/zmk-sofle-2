@@ -6,5 +6,5 @@ If you need the 3D printed model file or if there are any abnormalities with the
 # zmk-config-sofle
 
 
-<img src="keymap-drawer/sofle.svg" >
+<img src="keymap-drawer/my-keymap.svg" >
 
