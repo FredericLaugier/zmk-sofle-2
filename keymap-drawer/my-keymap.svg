@@ -327,11 +327,11 @@ path.combo {
 </g>
 <g transform="translate(150, 252)" class="key keypos-49">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">LEFT_GUI</tspan></text>
+<text x="0" y="0" class="key tap">LGUI</text>
 </g>
 <g transform="translate(210, 252)" class="key keypos-50">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">LEFT_ALT</tspan></text>
+<text x="0" y="0" class="key tap">LALT</text>
 </g>
 <g transform="translate(270, 252)" class="key keypos-51">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
@@ -341,11 +341,15 @@ path.combo {
 </g>
 <g transform="translate(330, 252)" class="key keypos-52">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap">LCTRL</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.2em">&amp;mt</tspan><tspan x="0" dy="1.2em">LCTRL</tspan><tspan x="0" dy="1.2em">ENTER</tspan>
+</text>
 </g>
 <g transform="translate(420, 252)" class="key keypos-53">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap">RCTRL</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-1.2em" style="font-size: 78%">&amp;mt</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">RCTRL</tspan><tspan x="0" dy="1.2em" style="font-size: 78%">BACKSPACE</tspan>
+</text>
 </g>
 <g transform="translate(480, 252)" class="key keypos-54">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
