@@ -25,8 +25,8 @@
 #define ALTGRD 1
 #define LAFAYETTE 2
 #define NAVI 3
-#define FONCTIONS 4
-#define MOUSENAVI 5
+#define MOUSENAVI 4
+#define FONCTIONS 5
 #define BT_OUT_SYS 6
 
 #define MY_COMMA_SEMI &mt FR_SEMICOLON FR_COMMA    // , / ;
@@ -235,7 +235,7 @@
                  &trans           &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &trans
                  &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp PAGE_UP      &mmv MOVE_DOWN   &kp FR_PLUS      &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_ASTERISK  &trans
                  &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_LEFT   &kp FR_MINUS     &kp FR_4         &kp FR_5         &kp FR_6         &kp FR_SLASH     &trans
-                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_RIGHT  &kp FR_0         &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_DOT       &trans
+                 &trans           &none            &none            &to BASE         &none            &none            &mmv MOVE_RIGHT  &kp FR_0         &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_DOT       &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &kp ESC          &mkp LCLK        &kp DEL          &trans           &trans           &trans           &trans
             >;
 
@@ -256,7 +256,7 @@
                  &to BASE         &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &trans
                  &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp PAGE_UP      &mmv MOVE_DOWN   &msc SCRL_LEFT   &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &msc SCRL_UP     &trans
                  &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_LEFT   &msc SCRL_RIGHT  &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &msc SCRL_DOWN   &trans
-                 &trans           &none            &none            &none            &none            &none            &mmv MOVE_RIGHT  &none            &mkp MB4         &mkp MCLK        &mkp MB5         &none            &trans
+                 &trans           &none            &none            &to BASE         &none            &none            &mmv MOVE_RIGHT  &none            &mkp MB4         &mkp MCLK        &mkp MB5         &none            &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
 
@@ -277,7 +277,7 @@
             bindings = <
                  &kp FR_SQUARE    &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp INSERT
                  &trans           &kp F11          &kp F12          &none            &none            &kp LC(HOME)     &mmv MOVE_DOWN   &none            &none            &none            &none            &kp PRINTSCREEN  &kp INSERT
-                 &trans           &none            &to BASE         &none            &none            &kp LC(END)      &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &trans
+                 &trans           &none            &none            &to BASE         &none            &kp LC(END)      &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &trans
                  &trans           &rgb_ug RGB_OFF  &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &mmv MOVE_RIGHT  &rgb_ug RGB_SPD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
@@ -298,7 +298,7 @@
             bindings = <
                  &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &none
                  &none            &bt BT_CLR       &bt BT_CLR_ALL   &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &kp F11          &kp F12          &kp UNDER        &kp PLUS
-                 &none            &out OUT_USB     &out OUT_BLE     &none            &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &kp LBRC         &kp RBRC
+                 &none            &out OUT_USB     &out OUT_BLE     &to BASE         &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &kp LBRC         &kp RBRC
                  &none            &sys_reset       &none            &bootloader      &none            &none            &mmv MOVE_RIGHT  &none            &none            &sys_reset       &soft_off        &bootloader      &none
 &trans                            &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
