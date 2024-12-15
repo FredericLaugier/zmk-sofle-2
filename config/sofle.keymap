@@ -57,6 +57,20 @@
             delay-ms = <0>;                   // 10
         };
 
+        tdLCTRL: tap_dance_left_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt LCTRL ENTER>, <&to MOUSENAVI>;
+        };
+
+        tdRCTRL: tap_dance_right_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mt RCTRL BACKSPACE>, <&to MOUSENAVI>;
+        };
+
         macros {
 
             a_circumflex: a_circumflex{
@@ -160,7 +174,7 @@
                  &kp TAB          &kp FR_A         &kp FR_Z         &kp FR_E         &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
                  &kp CAPS         &kp FR_Q         &kp FR_S         &kp FR_D         &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
                  &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         MY_COMMA_SEMI MY_DOT_COLON  MY_EXCL_QUEST &sl LAFAYETTE    &kp RSHFT
-&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &lt NAVI SPACE   &mt LCTRL ENTER  &kp ENTER     &mt RCTRL BACKSPACE &lt NAVI SPACE   &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
+&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &lt NAVI SPACE   &tdLCTRL         &kp ENTER        &tdRCTRL         &lt NAVI SPACE   &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 
             >;
 
@@ -239,7 +253,7 @@
 // | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
 
             bindings = <
-                 &to 0            &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &trans
+                 &to BASE         &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &trans
                  &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp PAGE_UP      &mmv MOVE_DOWN   &msc SCRL_LEFT   &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &msc SCRL_UP     &trans
                  &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_LEFT   &msc SCRL_RIGHT  &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &msc SCRL_DOWN   &trans
                  &trans           &none            &none            &none            &none            &none            &mmv MOVE_RIGHT  &none            &mkp MB4         &mkp MCLK        &mkp MB5         &none            &trans

@@ -13,7 +13,7 @@ layers:
     - ["⭾",            "A",         "Z",         "E",         "R",         "T",         "Y",         "U",         "I",         "O",         "P",         "BACKSPACE"]
     - ["⇬",            "Q",         "S",         "D",         "F",         "G",         "H",         "J",         "K",         "L",         "M",         "ENTER"]
     - ["LSHFT",        "W",         "X",         "C",         "V",         "B",         "N",         ", ;",       ". :",       "! ?",  "&sl LAFAYETTE",  "RSHFT"]
-    - ["&mo FONCTIONS", "LGUI", "LALT", "&lt NAVI SPACE", "&mt LCTRL ENTER", "&mt RCTRL BACKSPACE", "&lt NAVI SPACE", "&mo ALTGRD", "K_CMENU", "&mo FONCTIONS"]
+    - ["&mo FONCTIONS", "LGUI", "LALT", "&lt NAVI SPACE",   "&tdLCTRL", "&tdRCTRL", "&lt NAVI SPACE", "&mo ALTGRD", "K_CMENU", "&mo FONCTIONS"]
   AltGround:
     - ["▽",           "€",          "~",         "#",         "{",         "[",         "|",         "`",         "\\",        "^",         "@",         "▽"]
     - ["▽",           "^",          "<",         ">",         "$",         "%",         "+",         "`",         "'",         "\"",        "8*",        "▽"]
