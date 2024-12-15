@@ -261,7 +261,7 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
-            display-name = "Mouse Nav";
+            display-name = "MouseNav";
         };
 
 
@@ -277,13 +277,13 @@
             bindings = <
                  &kp FR_SQUARE    &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp INSERT
                  &trans           &kp F11          &kp F12          &none            &none            &kp LC(HOME)     &mmv MOVE_DOWN   &none            &none            &none            &none            &kp PRINTSCREEN  &kp INSERT
-                 &trans           &none            &none            &none            &none            &kp LC(END)      &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &trans
+                 &trans           &none            &to BASE         &none            &none            &kp LC(END)      &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &trans
                  &trans           &rgb_ug RGB_OFF  &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &mmv MOVE_RIGHT  &rgb_ug RGB_SPD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
-            display-name = "Fn";
+            display-name = "Fonctions";
         };
 
         // TODO: à compléter / le F n'est là que pour tester
