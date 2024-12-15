@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
-// #include <dt-bindings/zmk/modifiers.h>
 
 // #include "locale/keys_fr.h"
 #include "locale/keymap_fr.h"
@@ -17,10 +16,6 @@
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
 
-// #define TAP_MS 200
-
-// define BASE 0 ...
-// https://github.com/infused-kim/zmk-config-sofle/blob/main/config/sofle.keymap
 #define BASE 0
 #define ALTGRD 1
 #define LAFAYETTE 2
@@ -30,8 +25,8 @@
 #define BT_OUT_SYS 6
 
 #define MY_COMMA_SEMI &mt FR_SEMICOLON FR_COMMA    // , / ;
-#define MY_DOT_COLON  &mt FR_COLON FR_DOT          // . / :
-#define MY_EXCL_QUEST &mt FR_QUESTION FR_EXCL      // ! / ?
+#define MY_DOT_COLON  &mt FR_COLON     FR_DOT      // . / :
+#define MY_EXCL_QUEST &mt FR_QUESTION  FR_EXCL     // ! / ?
 
 / {
 
@@ -61,14 +56,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LCTRL ENTER>, <&to MOUSENAVI>;
+            bindings = <&mt LCTRL BACKSPACE>, <&to MOUSENAVI>;
         };
 
         tdRCTRL: tap_dance_right_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt RCTRL BACKSPACE>, <&to MOUSENAVI>;
+            bindings = <&mt RCTRL ENTER>, <&to MOUSENAVI>;
         };
 
         macros {
@@ -160,7 +155,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-    // TODO: caps & return / long tap pour ,.! vers ;:?
         Base {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |      ESC       |        1       |        2       |        3       |        4       |        5       |   UP_ARROW     |        6       |        7       |        8       |        9       |        0       |      DELETE    |
@@ -173,7 +167,7 @@
                  &kp ESC          &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_4         &kp FR_5         &kp UP_ARROW     &kp FR_6         &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_0         &kp DELETE
                  &kp TAB          &kp FR_A         &kp FR_Z         &kp FR_E         &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
                  &kp CAPS         &kp FR_Q         &kp FR_S         &kp FR_D         &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
-                 &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         MY_COMMA_SEMI MY_DOT_COLON  MY_EXCL_QUEST &sl LAFAYETTE    &kp RSHFT
+                 &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         MY_COMMA_SEMI    MY_DOT_COLON     MY_EXCL_QUEST    &sl LAFAYETTE    &kp RSHFT
 &kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &lt NAVI SPACE   &tdLCTRL         &kp ENTER        &tdRCTRL         &lt NAVI SPACE   &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 
             >;
@@ -222,7 +216,6 @@
             display-name = "Lafayette";
         };
 
-        // TODO: à compléter
         Navigation {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
@@ -240,10 +233,9 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
-            display-name = "Nav.";
+            display-name = "Nav";
         };
 
-                // TODO: à compléter
         MouseNavi {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
@@ -265,7 +257,6 @@
         };
 
 
-        // TODO: à compléter
         Fonctions {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |       ²        |       F1       |       F2       |       F3       |       F4       |       F5       |   MOVE_UP      |       F6       |       F7       |       F8       |       F9       |       F10      |     INSERT     |
@@ -289,16 +280,16 @@
         // TODO: à compléter / le F n'est là que pour tester
         BtOutSys {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
-// |            |                |                |                |                |                |                |   MOVE_DOWN    |                |                |                |                |                |                |
-// |            |                |                |                |                |        F       |                |   MOVE_RIGHT   |                |                |                |                |                |                |
-// |            |                |                |                |                |                |                |   MOVE_LEFT    |                |                |                |                |                |                |
+// |            |                |  BT_SEL 0      |   BT_SEL 1     |   BT_SEL 2     |   BT_SEL 3     |   BT_SEL 4     |   MOVE_UP      |                |                |                |                |                |                |
+// |            |                |  BT_CLR        |   BT_CLR_ALL   |                |                |                |   MOVE_DOWN    |                |                |                |                |                |                |
+// |            |                |  OUT_USB       |   OUT_BLE      |   &to BASE     |        F       |                |   MOVE_RIGHT   |                |                |                |                |                |                |
+// |            |                |                |                |                |                |                |   MOVE_LEFT    |                |                |   sys_reset    |    soft_off    |   bootloader   |                |
 // | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
 
             bindings = <
-                 &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &none
-                 &none            &bt BT_CLR       &bt BT_CLR_ALL   &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &kp F11          &kp F12          &kp UNDER        &kp PLUS
-                 &none            &out OUT_USB     &out OUT_BLE     &to BASE         &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &kp LBRC         &kp RBRC
+                 &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP     &none            &none            &none            &none            &none            &none
+                 &none            &bt BT_CLR       &bt BT_CLR_ALL   &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &none            &none            &none            &none
+                 &none            &out OUT_USB     &out OUT_BLE     &to BASE         &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &none
                  &none            &sys_reset       &none            &bootloader      &none            &none            &mmv MOVE_RIGHT  &none            &none            &sys_reset       &soft_off        &bootloader      &none
 &trans                            &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
