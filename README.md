@@ -8,3 +8,6 @@ If you need the 3D printed model file or if there are any abnormalities with the
 
 <img src="keymap-drawer/my-keymap.svg" >
 
+or from https://www.keyboard-layout-editor.com/#/gists/f7d8eed23f6d24b042c132efe39292fd
+
+<img src="kle/soflekeyboard.png" >

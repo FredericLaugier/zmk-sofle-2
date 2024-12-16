@@ -179,16 +179,16 @@
         AltGround {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |                |       €        |        ~       |        #       |        {       |        [       |   UP_ARROW     |        |       |        `       |       \        |        ^       |        @       |                |
-// |            |                |       ^        |        <       |        >       |        $       |        %       |   DOWN_ARROW   |        +       |        `       |       '        |        "       |        *       |                |
+// |            |                |       @        |        <       |        >       |        $       |        %       |   DOWN_ARROW   |        +       |        `       |       '        |        "       |        *       |                |
 // |            |                |       {        |        (       |        )       |        }       |        =       |   LEFT_ARROW   |        -       |        _       |       \        |        |       |        /       |                |
-// |            |                |       ~        |        [       |        ]       |        @       |        #       |   RIGHT_ARROW  |        °       |        ;       |       :        |        &       |        @       |                |
+// |            |                |       ~        |        [       |        ]       |        ^       |        #       |   RIGHT_ARROW  |        °       |        ;       |       :        |        &       |        @       |                |
 // | C_MUTE     |                |                |                |                |                |                |      ENTER     |                |                |                |                |                |                |
 
             bindings = <
                  &trans            &kp FR_EURO     &kp FR_TILDE     &kp FR_HASH      &kp FR_LCBR      &kp FR_LBKT      &kp UP_ARROW     &kp FR_PIPE      &kp FR_GRAVE     &kp FR_BACKSLASH &kp FR_CIRC      &kp FR_AT        &trans
-                 &trans            &kp FR_CIRC     &kp FR_LT        &kp FR_GT        &kp FR_DOLLAR    &kp FR_PERCENT   &kp DOWN_ARROW   &kp FR_PLUS      &kp FR_GRAVE     &kp FR_SQUOT     &kp FR_DQUOT     &kp FR_ASTERISK  &trans
+                 &trans            &kp FR_AT       &kp FR_LT        &kp FR_GT        &kp FR_DOLLAR    &kp FR_PERCENT   &kp DOWN_ARROW   &kp FR_PLUS      &kp FR_GRAVE     &kp FR_SQUOT     &kp FR_DQUOT     &kp FR_ASTERISK  &trans
                  &trans            &kp FR_LCBR     &kp FR_LPAR      &kp FR_RPAR      &kp FR_RCBR      &kp FR_EQUAL     &kp LEFT_ARROW   &kp FR_MINUS     &kp FR_UNDER     &kp FR_BACKSLASH &kp FR_PIPE      &kp FR_SLASH     &trans
-                 &trans            &kp FR_TILDE    &kp FR_LBKT      &kp FR_RBKT      &kp FR_AT        &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DEGRE     &kp FR_SEMICOLON &kp FR_COLON     &kp FR_AMPERSAND &kp FR_AT        &trans
+                 &trans            &kp FR_TILDE    &kp FR_LBKT      &kp FR_RBKT      &kp FR_CIRC      &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DEGRE     &kp FR_SEMICOLON &kp FR_COLON     &kp FR_AMPERSAND &kp FR_AT        &trans
 &kp C_MUTE                         &trans          &trans           &trans           &trans           &trans           &kp ENTER        &trans           &trans           &trans           &trans           &trans
             >;
 
@@ -205,7 +205,7 @@
 // | C_MUTE     |                |                |                |                |                |                |      ENTER     |                |                |                |                |                |                |
 
             bindings = <
-                 &trans           &kp FR_AMPERSAND &kp FR_E_ACUTE   &kp FR_DQUOT     &kp FR_SQUOT     &kp FR_LPAR      &kp UP_ARROW     &kp FR_UNDER     &kp FR_E_GRAVE   &kp FR_UNDER     &kp FR_C_CEDILLA &kp FR_A_GRAVE    &trans
+                 &trans           &kp FR_AMPERSAND &kp FR_E_ACUTE   &kp FR_DQUOT     &kp FR_SQUOT     &kp FR_LPAR      &kp UP_ARROW     &kp FR_MINUS     &kp FR_E_GRAVE   &kp FR_UNDER     &kp FR_C_CEDILLA &kp FR_A_GRAVE    &trans
                  &trans           &kp FR_A_GRAVE   &kp FR_E_ACUTE   &kp FR_E_GRAVE   &kp FR_EURO      &kp FR_UMLAUT    &kp DOWN_ARROW   &kp FR_CIRC      &kp FR_U_GRAVE   &kp FR_UNDER     &kp FR_DQUOT     &kp FR_POUND_SIGN &trans
                  &trans           &a_circumflex    &kp FR_DOLLAR    &e_circumflex    &kp FR_AMPERSAND &kp FR_LPAR      &kp LEFT_ARROW   &kp FR_RPAR      &u_circumflex    &i_circumflex    &o_circumflex    &kp FR_MICRO      &trans
                  &trans           &a_diaeresis     &kp FR_A         &kp FR_C_CEDILLA &kp FR_E         &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DOT       &u_diaeresis     &i_diaeresis     &o_diaeresis     &kp FR_O          &trans
@@ -221,15 +221,15 @@
 // |            |                |                |                |                |                |                |   MOVE_UP      |                |                |                |                |                |                |
 // |            |                |     TAB        |      HOME      |    UP_ARROW    |      END       |    LC(HOME)    |   MOVE_DOWN    |       +        |       7        |       8        |       9        |        *       |                |
 // |            |                |     CAPS       |   LEFT_ARROW   |   DOWN_ARROW   |  RIGHT_ARROW   |    LC(END)     |   MOVE_RIGHT   |       -        |       4        |       5        |       6        |        /       |                |
-// |            |                |                |                |                |                |                |   MOVE_LEFT    |       0        |       1        |       2        |       3        |        .       |                |
-// | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
+// |            |                |                |      LCLK      |     MOVE_UP    |      RCLK      |                |   MOVE_LEFT    |       0        |       1        |       2        |       3        |        .       |                |
+// | C_MUTE     |                |                |   MOVE_LEFT    |    MOVE_DOWN   |   MOVE_RIGHT                |  DEL |   LCLK  |  ESC |             |                |                |                |                |
 
             bindings = <
                  &trans           &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &trans
                  &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp PAGE_UP      &mmv MOVE_DOWN   &kp FR_PLUS      &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_ASTERISK  &trans
                  &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_LEFT   &kp FR_MINUS     &kp FR_4         &kp FR_5         &kp FR_6         &kp FR_SLASH     &trans
-                 &trans           &none            &none            &to BASE         &none            &none            &mmv MOVE_RIGHT  &kp FR_0         &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_DOT       &trans
-&kp C_MUTE                        &trans           &trans           &trans           &trans           &kp DEL          &mkp LCLK        &kp ESC          &trans           &trans           &trans           &trans
+                 &trans           &none            &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &none            &mmv MOVE_RIGHT  &kp FR_0         &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_DOT       &trans
+&kp C_MUTE                                         &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans      &kp DEL &mkp LCLK &kp ESC  &trans           &trans           &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -249,7 +249,7 @@
                  &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp PAGE_UP      &mmv MOVE_DOWN   &msc SCRL_LEFT   &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &msc SCRL_UP     &trans
                  &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_LEFT   &msc SCRL_RIGHT  &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &msc SCRL_DOWN   &trans
                  &trans           &none            &none            &to BASE         &none            &none            &mmv MOVE_RIGHT  &none            &mkp MB4         &mkp MCLK        &mkp MB5         &none            &trans
-&kp C_MUTE                        &trans           &trans           &trans           &trans           &to BASE         &mkp LCLK        &to BASE         &trans           &trans           &trans           &trans
+&kp C_MUTE                        &none            &none            &none            &none            &to BASE         &mkp LCLK        &to BASE         &trans           &trans           &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;

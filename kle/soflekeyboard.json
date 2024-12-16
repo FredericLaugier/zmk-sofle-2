@@ -1,0 +1,451 @@
+[
+  {
+    "name": "SofleKeyboard",
+    "author": "frl after Josef Adamcik",
+    "switchMount": "cherry",
+    "switchBrand": "outemu"
+  },
+  [
+    {
+      "y": 0.2,
+      "x": 3,
+      "c": "#e8e7e3",
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "f": 6,
+      "fa": [
+        0,
+        0,
+        5,
+        4
+      ]
+    },
+    "\n\n\"\n#\nF3\n\n\n\n\n3",
+    {
+      "x": 7
+    },
+    "\n\n_\n\\\nF8\n\n\n\n\n8"
+  ],
+  [
+    {
+      "y": -0.95,
+      "x": 10
+    },
+    "\n\nè\n`\nF7\n\n\n\n\n7"
+  ],
+  [
+    {
+      "y": -0.9,
+      "x": 2
+    },
+    "\n\né\n~\nF2\n\n\n\n\n2",
+    {
+      "x": 1
+    },
+    "\n\n'\n{\nF4\n\n\n\n\n4",
+    {
+      "x": 7
+    },
+    "\n\nç\n^\nF9\n\n\n\n\n9"
+  ],
+  [
+    {
+      "y": -0.85,
+      "t": "#000000",
+      "a": 7
+    },
+    "<i class='mss mss-Unicode-Escape-3'></i>\n\n\n\n²",
+    {
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "a": 4
+    },
+    "\n\n&\n€\nF1\n\n\n\n\n1",
+    {
+      "x": 3
+    },
+    "\n\n(\n[\nF5\n\n\n\n\n5",
+    {
+      "x": 3
+    },
+    "\n\n-\n|\nF6\n\n\n\n\n6",
+    {
+      "x": 3
+    },
+    "\n\nà\n@\nF10\n\n\n\n\n0",
+    {
+      "t": "#000000",
+      "a": 7
+    },
+    "⌦\n\n\n\ninsert"
+  ],
+  [
+    {
+      "y": -0.30000000000000004,
+      "x": 3,
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "a": 4,
+      "fa": [
+        0,
+        5,
+        5,
+        4
+      ]
+    },
+    "\n⭡\nè\n>\n\n\n\n\n\nE",
+    {
+      "x": 7,
+      "fa": [
+        4,
+        5,
+        5,
+        4
+      ]
+    },
+    "<i class='fa fa-angle-up'></i>\n8\n_\n'\n\n\n\n\n\nI"
+  ],
+  [
+    {
+      "y": -0.95,
+      "x": 10,
+      "fa": [
+        2,
+        5,
+        5,
+        4
+      ]
+    },
+    "lc\n7\nù\n`\n\n\n\n\n\nU"
+  ],
+  [
+    {
+      "y": -0.8999999999999999,
+      "x": 2
+    },
+    "\n⭶\né\n<\nF12\n\n\n\n\nZ",
+    {
+      "x": 1
+    },
+    "\n⭸\n€\n$\n\n\n\n\n\nR",
+    {
+      "x": 7
+    },
+    "rc\n9\n\"\n\"\n\n\n\n\n\nO"
+  ],
+  [
+    {
+      "y": -0.8500000000000001,
+      "t": "#000000",
+      "a": 7,
+      "f": 6
+    },
+    "⭾",
+    {
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "a": 4
+    },
+    "\n⭾\nà\n@\nF11\n\n\n\n\nA",
+    {
+      "x": 3
+    },
+    "\n⭻\n\"\n%\n<i class='kb kb-Arrows-Top-2'></i>\n\n\n\n\nT",
+    {
+      "c": "#cccccc",
+      "t": "#000000",
+      "a": 7,
+      "w": 3,
+      "h": 2.75,
+      "d": true
+    },
+    "",
+    {
+      "c": "#e8e7e3",
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "a": 4,
+      "fa": [
+        4,
+        5,
+        5,
+        4
+      ]
+    },
+    "<i class='fa fa-angle-double-left'></i>\n+\n^\n+\n\n\n\n\n\nY",
+    {
+      "x": 3
+    },
+    "<i class='fa fa-angle-double-up'></i>\n*\n£\n*\nprint scr\n\n\n\n\nP",
+    {
+      "t": "#000000",
+      "a": 7,
+      "f": 6
+    },
+    "⌫\n\n\n\ninsert"
+  ],
+  [
+    {
+      "y": -0.2999999999999998,
+      "x": 3,
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "a": 4,
+      "fa": [
+        4,
+        5,
+        0,
+        4
+      ]
+    },
+    "\n⭣\nê\n)\n\n\n\n\n\nD",
+    {
+      "x": 7,
+      "fa": [
+        0,
+        5,
+        0,
+        4
+      ]
+    },
+    "<i class='fa fa-angle-down'></i>\n5\nî\n\\\n\n\n\n\n\nK"
+  ],
+  [
+    {
+      "y": -0.8500000000000001,
+      "x": 2
+    },
+    "\n⭠\n$\n(\n\n\n\n\n\nS",
+    {
+      "x": 1,
+      "n": true
+    },
+    "\n⭢\n&\n}\n\n\n\n\n\nF",
+    {
+      "x": 5,
+      "n": true
+    },
+    "<i class='fa fa-angle-left'></i>\n4\nû\n_\n\n\n\n\n\nJ",
+    {
+      "x": 1
+    },
+    "<i class='fa fa-angle-right'></i>\n6\nô\n|\n\n\n\n\n\nL"
+  ],
+  [
+    {
+      "y": -0.8500000000000001,
+      "t": "#000000",
+      "a": 7
+    },
+    "⇬",
+    {
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "a": 4
+    },
+    "\n⇬\nâ\n{\n\n\n\n\n\nQ",
+    {
+      "x": 3
+    },
+    "\n⭽\n(\n=\n<i class='kb kb-Arrows-Bottom-2'></i>\n\n\n\n\nG",
+    {
+      "x": 3
+    },
+    "<i class='fa fa-angle-double-right'></i>\n-\n)\n-\n\n\n\n\n\nH",
+    {
+      "x": 3
+    },
+    "<i class='fa fa-angle-double-down'></i>\n/\nµ\n/\n\n\n\n\n\nM",
+    {
+      "t": "#000000",
+      "a": 7
+    },
+    "⏎"
+  ],
+  [
+    {
+      "y": -0.2999999999999998,
+      "x": 3,
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "a": 4
+    },
+    "\n\nç\n]\nrgb EFF\n\n\n\n\nC",
+    {
+      "x": 7,
+      "fa": [
+        2,
+        5,
+        5,
+        4
+      ]
+    },
+    "mc\n2\nï\n:\nrgb HUD\n\n\n\n:\n\n."
+  ],
+  [
+    {
+      "y": -0.8500000000000001,
+      "x": 2
+    },
+    "\n\na\n[\nrgb ON\n\n\n\n\nX",
+    {
+      "x": 1
+    },
+    "\n\ne\n^\nrgb EFR\n\n\n\n\nV",
+    {
+      "x": 5
+    },
+    "\n1\nü\n;\nrgb HUI\n\n\n\n;\n\n,",
+    {
+      "x": 1
+    },
+    "\n3\nö\n&\nrgb BRI\n\n\n\n?\n\n!"
+  ],
+  [
+    {
+      "y": -0.8500000000000001,
+      "t": "#000000",
+      "a": 7,
+      "f": 6
+    },
+    "shift",
+    {
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "a": 4,
+      "fa": [
+        2,
+        5,
+        0,
+        4
+      ]
+    },
+    "\n\nä\n~\nrgb OFF\n\n\n\n\nW",
+    {
+      "x": 3
+    },
+    "\n\n#\n#\nrgb SPI\n\n\n\n\nB",
+    {
+      "x": 3
+    },
+    "\n0\n.\n°\nrgb SPD\n\n\n\n\nN",
+    {
+      "x": 3,
+      "fa": [
+        2,
+        5,
+        5,
+        4
+      ]
+    },
+    "\n.\no\n@\nrgb BRD\n\n\n\n\n✪",
+    {
+      "t": "#000000",
+      "a": 7,
+      "f": 6
+    },
+    "shift"
+  ],
+  [
+    {
+      "y": -0.15000000000000036,
+      "x": 2.75,
+      "f": 6
+    },
+    "<i class='kb kb-logo-linux-tux'></i>",
+    {
+      "f": 6
+    },
+    "alt",
+    {
+      "x": 5.5,
+      "f": 6
+    },
+    "agr"
+  ],
+  [
+    {
+      "y": -0.8499999999999996,
+      "x": 1.75,
+      "f": 6
+    },
+    "fn"
+  ],
+  [
+    {
+      "rx": 0.25,
+      "y": 4.35,
+      "x": 11,
+      "f": 5
+    },
+    "menu"
+  ],
+  [
+    {
+      "rx": 0.5,
+      "y": 4.5,
+      "x": 11.75,
+      "f": 6
+    },
+    "fn"
+  ],
+  [
+    {
+      "r": 15,
+      "rx": 0.75,
+      "y": 3.25,
+      "x": 5.25,
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "a": 4,
+      "fa": [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ]
+    },
+    "\n<i class='kb kb-Unicode-Control-3'></i>\n\n\n\n\n\n\n\nspc"
+  ],
+  [
+    {
+      "r": 30,
+      "rx": 0,
+      "y": 0.6,
+      "x": 7.75,
+      "f": 5,
+      "fa": [
+        4,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3
+      ]
+    },
+    "<i class='fa fa-mouse-pointer'></i>\n\n\n\n\n\nctrl\n<i class='kb kb-Unicode-BackSpace-DeleteLeft-Big'></i>"
+  ],
+  [
+    {
+      "r": -30,
+      "rx": 0.5,
+      "y": 7.85,
+      "x": 3.75,
+      "fa": [
+        4,
+        4,
+        0,
+        0
+      ]
+    },
+    "<i class='fa fa-mouse-pointer'></i>\n\n\n\n\n\nctrl\n<i class='mss mss-Return-5'></i>"
+  ],
+  [
+    {
+      "r": -15,
+      "rx": 0,
+      "y": 6.9,
+      "x": 7.5,
+      "f": 4
+    },
+    "\n<i class='kb kb-Unicode-Control-3'></i>\n\n\n\n\n\n\n\nspc"
+  ]
+]
