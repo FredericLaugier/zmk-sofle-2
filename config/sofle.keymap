@@ -167,6 +167,30 @@
                 bindings = <&kp FR_UMLAUT &kp FR_U>;
             };
 
+            a_e: a_e {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    = <&macro_press   &kp LCTRL &kp LSHIFT &kp FR_U>
+                    , <&macro_tap     &kp FR_O &kp FR_O &kp FR_E &kp FR_6>
+                    , <&macro_release &kp LCTRL &kp LSHIFT>
+                    ;
+            };
+
+            o_e: o_e {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                wait-ms = <40>;
+                tap-ms = <40>;
+                bindings
+                    = <&macro_press   &kp LCTRL &kp LSHIFT &kp U>
+                    , <&macro_tap     &kp FR_O &kp FR_1 &kp FR_5 &kp FR_3>
+                    , <&macro_release &kp LCTRL &kp LSHIFT>
+                    ;
+            };
+
         };
 
     };
@@ -235,7 +259,7 @@
                  &trans           &kp FR_AMPERSAND &kp FR_E_ACUTE   &kp FR_DQUOT     &kp FR_SQUOT     &kp FR_LPAR      &kp UP_ARROW     &kp FR_MINUS     &kp FR_E_GRAVE   &kp FR_UNDER     &kp FR_C_CEDILLA &kp FR_A_GRAVE    &trans
                  &trans           &kp FR_A_GRAVE   &kp FR_E_ACUTE   &kp FR_E_GRAVE   &kp FR_EURO      &kp FR_UMLAUT    &kp DOWN_ARROW   &kp FR_CIRC      &kp FR_U_GRAVE   &kp FR_UNDER     &kp FR_DQUOT     &kp FR_POUND_SIGN &trans
                  &trans           &a_circumflex    &kp FR_DOLLAR    &e_circumflex    &kp FR_AMPERSAND &kp FR_LPAR      &kp LEFT_ARROW   &kp FR_RPAR      &u_circumflex    &i_circumflex    &o_circumflex    &kp FR_MICRO      &trans
-                 &trans           &a_diaeresis     &kp FR_A         &kp FR_C_CEDILLA &kp FR_E         &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DOT       &u_diaeresis     &i_diaeresis     &o_diaeresis     &kp FR_O          &trans
+                 &trans           &a_diaeresis     &a_e             &kp FR_C_CEDILLA &e_diaeresis     &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DOT       &u_diaeresis     &i_diaeresis     &o_diaeresis     &o_e              &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &kp ENTER        &trans           &trans           &trans           &trans           &trans
             >;
 
