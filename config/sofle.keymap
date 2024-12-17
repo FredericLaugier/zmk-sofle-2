@@ -66,6 +66,32 @@
             bindings = <&mt RCTRL ENTER>, <&to MOUSENAVI>;
         };
 
+        // col_semi: colon_semicolon {
+        //     compatible = "zmk,behavior-mod-morph";
+        //     #binding-cells = <0>;
+        //     bindings = <&kp COLON>, <&kp SEMI>;
+        //     mods = <(MOD_LSFT|MOD_RSFT)>;
+        // };
+
+        comma_semi: my_comma_semi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        dot_col: my_dot_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FR_DOT>, <&kp FR_COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        excl_quest: my_excl_quest {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp FR_EXCL>, <&kp FR_QUESTION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         macros {
 
             a_circumflex: a_circumflex{
@@ -161,14 +187,14 @@
 // |            |      TAB       |        A       |        Z       |        E       |        R       |        T       |   DOWN_ARROW   |        Y       |        U       |        I       |        O       |        P       |      BKSPC     |
 // |            |     CAPS       |        Q       |        S       |        D       |        F       |        G       |   LEFT_ARROW   |        H       |        J       |        K       |        L       |        M       |      ENTER     |
 // |            |     LSHFT      |        W       |        X       |        C       |        V       |        B       |   RIGHT_ARROW  |        N       |      ,  ;      |       . :      |       ! ?      | &sl LAFAYETTE  |      SHIFT     |
-// | C_MUTE     |                | &mo FONCTIONS  |    LEFT_GUI    |    LEFT_ALT    | &lt NAVI SPACE |     LCTRL      |      ENTER     |     RCTRL      | &lt NAVI SPACE |  &mo ALTGRD    |     K_CMENU    | &mo FONCTIONS  |                |
+// | C_MUTE     |                | &mo FONCTIONS  |    LEFT_GUI    |   LALT ENTER   | &lt NAVI SPACE |     LCTRL      |      ENTER     |     RCTRL      | &lt NAVI SPACE |  &mo ALTGRD    |     K_CMENU    | &mo FONCTIONS  |                |
 
             bindings = <
                  &kp ESC          &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_4         &kp FR_5         &kp UP_ARROW     &kp FR_6         &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_0         &kp DELETE
                  &kp TAB          &kp FR_A         &kp FR_Z         &kp FR_E         &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
                  &kp CAPS         &kp FR_Q         &kp FR_S         &kp FR_D         &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
-                 &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         MY_COMMA_SEMI    MY_DOT_COLON     MY_EXCL_QUEST    &sl LAFAYETTE    &kp RSHFT
-&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &kp LEFT_ALT     &lt NAVI SPACE   &tdLCTRL         &kp ENTER        &tdRCTRL         &lt NAVI SPACE   &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
+                 &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &comma_semi      &dot_col         &excl_quest      &sl LAFAYETTE    &kp RSHFT
+&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI     &mt LALT ENTER   &lt NAVI SPACE   &tdLCTRL         &kp ENTER        &tdRCTRL         &lt NAVI SPACE   &mo ALTGRD       &kp K_CMENU      &mo FONCTIONS
 
             >;
 
@@ -259,17 +285,17 @@
 
         Fonctions {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |            |       ²        |       F1       |       F2       |       F3       |       F4       |       F5       |   MOVE_UP      |       F6       |       F7       |       F8       |       F9       |       F10      |     INSERT     |
-// |            |                |       F11      |       F12      |                |                |                |   MOVE_DOWN    |                |                |                |                |  PRINTSCREEN   |     INSERT     |
-// |            |                |                |                |                |                |                |   MOVE_LEFT    |                |                |                |                |                |                |
-// |            |                |     RGB_OFF    |      RGB_ON    |     RGB_EFF    |    RGB_EFR     |     RGB_SPI    |   MOVE_RIGHT   |    RGB_SPD     |    RGB_HUI     |     RGB_HUD    |     RGB_BRI    |     RGB_BRD    |                |
+// |            |       ²        |       F1       |       F2       |       F3       |       F4       |       F5       |   SCRL_UP      |       F6       |       F7       |       F8       |       F9       |       F10      |     INSERT     |
+// |            |                |       F11      |       F12      |                |                |                |   SCRL_DOWN    |                |                |                |                |  PRINTSCREEN   |     INSERT     |
+// |            |                |                |                |                |                |                |   SCRL_LEFT    |                |                |                |                |                |                |
+// |            |                |     RGB_OFF    |      RGB_ON    |     RGB_EFF    |    RGB_EFR     |     RGB_SPI    |   SCRL_RIGHT   |    RGB_SPD     |    RGB_HUI     |     RGB_HUD    |     RGB_BRI    |     RGB_BRD    |                |
 // | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
 
             bindings = <
-                 &kp FR_SQUARE    &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &mmv MOVE_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp INSERT
-                 &trans           &kp F11          &kp F12          &none            &none            &kp LC(HOME)     &mmv MOVE_DOWN   &none            &none            &none            &none            &kp PRINTSCREEN  &kp INSERT
-                 &trans           &none            &none            &to BASE         &none            &kp LC(END)      &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &trans
-                 &trans           &rgb_ug RGB_OFF  &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &mmv MOVE_RIGHT  &rgb_ug RGB_SPD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans
+                 &kp FR_SQUARE    &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &msc SCRL_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp INSERT
+                 &trans           &kp F11          &kp F12          &none            &none            &kp LC(HOME)     &msc SCRL_DOWN   &none            &none            &none            &none            &kp PRINTSCREEN  &kp INSERT
+                 &trans           &none            &none            &to BASE         &none            &kp LC(END)      &msc SCRL_LEFT   &none            &none            &none            &none            &none            &trans
+                 &trans           &rgb_ug RGB_OFF  &rgb_ug RGB_ON   &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &msc SCRL_RIGHT  &rgb_ug RGB_SPD  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
 
