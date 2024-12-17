@@ -15,20 +15,20 @@
       "fa": [
         0,
         0,
-        5,
+        4,
         4
       ]
     },
     "\n\n\"\n#\nF3\n\n\n\n\n3",
     {
-      "x": 7
+      "x": 7.25
     },
     "\n\n_\n\\\nF8\n\n\n\n\n8"
   ],
   [
     {
       "y": -0.95,
-      "x": 10
+      "x": 10.25
     },
     "\n\nè\n`\nF7\n\n\n\n\n7"
   ],
@@ -43,7 +43,7 @@
     },
     "\n\n'\n{\nF4\n\n\n\n\n4",
     {
-      "x": 7
+      "x": 7.25
     },
     "\n\nç\n^\nF9\n\n\n\n\n9"
   ],
@@ -64,7 +64,7 @@
     },
     "\n\n(\n[\nF5\n\n\n\n\n5",
     {
-      "x": 3
+      "x": 3.25
     },
     "\n\n-\n|\nF6\n\n\n\n\n6",
     {
@@ -85,18 +85,18 @@
       "a": 4,
       "fa": [
         0,
-        5,
-        5,
+        3,
+        4,
         4
       ]
     },
     "\n⭡\nè\n>\n\n\n\n\n\nE",
     {
-      "x": 7,
+      "x": 7.25,
       "fa": [
+        3,
+        3,
         4,
-        5,
-        5,
         4
       ]
     },
@@ -105,13 +105,7 @@
   [
     {
       "y": -0.95,
-      "x": 10,
-      "fa": [
-        2,
-        5,
-        5,
-        4
-      ]
+      "x": 10.25
     },
     "lc\n7\nù\n`\n\n\n\n\n\nU"
   ],
@@ -126,7 +120,7 @@
     },
     "\n⭸\n€\n$\n\n\n\n\n\nR",
     {
-      "x": 7
+      "x": 7.25
     },
     "rc\n9\n\"\n\"\n\n\n\n\n\nO"
   ],
@@ -148,24 +142,20 @@
     },
     "\n⭻\n\"\n%\n<i class='kb kb-Arrows-Top-2'></i>\n\n\n\n\nT",
     {
+      "x": 0.25,
       "c": "#cccccc",
       "t": "#000000",
       "a": 7,
-      "w": 3,
+      "w": 2.75,
       "h": 2.75,
       "d": true
     },
     "",
     {
+      "x": 0.25,
       "c": "#e8e7e3",
       "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
-      "a": 4,
-      "fa": [
-        4,
-        5,
-        5,
-        4
-      ]
+      "a": 4
     },
     "<i class='fa fa-angle-double-left'></i>\n+\n^\n+\n\n\n\n\n\nY",
     {
@@ -184,23 +174,11 @@
       "y": -0.2999999999999998,
       "x": 3,
       "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
-      "a": 4,
-      "fa": [
-        4,
-        5,
-        0,
-        4
-      ]
+      "a": 4
     },
     "\n⭣\nê\n)\n\n\n\n\n\nD",
     {
-      "x": 7,
-      "fa": [
-        0,
-        5,
-        0,
-        4
-      ]
+      "x": 7.25
     },
     "<i class='fa fa-angle-down'></i>\n5\nî\n\\\n\n\n\n\n\nK"
   ],
@@ -216,7 +194,7 @@
     },
     "\n⭢\n&\n}\n\n\n\n\n\nF",
     {
-      "x": 5,
+      "x": 5.25,
       "n": true
     },
     "<i class='fa fa-angle-left'></i>\n4\nû\n_\n\n\n\n\n\nJ",
@@ -229,7 +207,8 @@
     {
       "y": -0.8500000000000001,
       "t": "#000000",
-      "a": 7
+      "a": 7,
+      "f": 6
     },
     "⇬",
     {
@@ -242,7 +221,7 @@
     },
     "\n⭽\n(\n=\n<i class='kb kb-Arrows-Bottom-2'></i>\n\n\n\n\nG",
     {
-      "x": 3
+      "x": 3.25
     },
     "<i class='fa fa-angle-double-right'></i>\n-\n)\n-\n\n\n\n\n\nH",
     {
@@ -251,7 +230,8 @@
     "<i class='fa fa-angle-double-down'></i>\n/\nµ\n/\n\n\n\n\n\nM",
     {
       "t": "#000000",
-      "a": 7
+      "a": 7,
+      "f": 6
     },
     "⏎"
   ],
@@ -262,15 +242,9 @@
       "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
       "a": 4
     },
-    "\n\nç\n]\nrgb EFF\n\n\n\n\nC",
+    "\n<i class='fa fa-angle-up'></i>\nç\n]\nrgb EFF\n\n\n\n\nC",
     {
-      "x": 7,
-      "fa": [
-        2,
-        5,
-        5,
-        4
-      ]
+      "x": 7.25
     },
     "mc\n2\nï\n:\nrgb HUD\n\n\n\n:\n\n."
   ],
@@ -279,13 +253,13 @@
       "y": -0.8500000000000001,
       "x": 2
     },
-    "\n\na\n[\nrgb ON\n\n\n\n\nX",
+    "\nlc\na\n[\nrgb ON\n\n\n\n\nX",
     {
       "x": 1
     },
-    "\n\ne\n^\nrgb EFR\n\n\n\n\nV",
+    "\nrc\ne\n^\nrgb EFR\n\n\n\n\nV",
     {
-      "x": 5
+      "x": 5.25
     },
     "\n1\nü\n;\nrgb HUI\n\n\n\n;\n\n,",
     {
@@ -303,13 +277,7 @@
     "shift",
     {
       "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
-      "a": 4,
-      "fa": [
-        2,
-        5,
-        0,
-        4
-      ]
+      "a": 4
     },
     "\n\nä\n~\nrgb OFF\n\n\n\n\nW",
     {
@@ -317,17 +285,12 @@
     },
     "\n\n#\n#\nrgb SPI\n\n\n\n\nB",
     {
-      "x": 3
+      "x": 3.25
     },
     "\n0\n.\n°\nrgb SPD\n\n\n\n\nN",
     {
       "x": 3,
-      "fa": [
-        2,
-        5,
-        5,
-        4
-      ]
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF\n\n\n\n\n\n#008000"
     },
     "\n.\no\n@\nrgb BRD\n\n\n\n\n✪",
     {
@@ -339,42 +302,62 @@
   ],
   [
     {
-      "y": -0.15000000000000036,
-      "x": 2.75,
-      "f": 6
+      "y": -0.25,
+      "x": 3,
+      "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
+      "a": 4
     },
-    "<i class='kb kb-logo-linux-tux'></i>",
-    {
-      "f": 6
-    },
-    "alt",
-    {
-      "x": 5.5,
-      "f": 6
-    },
-    "agr"
+    "\n<i class='fa fa-angle-down'></i>\n\n\n\n\n\n\n\n<i class='kb kb-logo-linux-tux'></i>"
   ],
   [
     {
-      "y": -0.8499999999999996,
-      "x": 1.75,
-      "f": 6
+      "y": -0.9000000000000004,
+      "x": 2
     },
-    "fn"
+    "\n<i class='fa fa-angle-left'></i>\n\n\n\n\n\n\n\nfn",
+    {
+      "x": 1,
+      "fa": [
+        3,
+        3,
+        4,
+        4,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "\n<i class='fa fa-angle-right'></i>\n\n\n\n\nalt\n⌫",
+    {
+      "x": 5.25,
+      "t": "#000000",
+      "a": 6,
+      "fa": [
+        4,
+        3,
+        2
+      ]
+    },
+    "agr\n\n⌦"
   ],
   [
     {
       "rx": 0.25,
-      "y": 4.35,
+      "y": 4.25,
       "x": 11,
-      "f": 5
+      "a": 7,
+      "f": 5,
+      "fa": [
+        4
+      ]
     },
     "menu"
   ],
   [
     {
       "rx": 0.5,
-      "y": 4.5,
+      "y": 4.35,
       "x": 11.75,
       "f": 6
     },
@@ -385,12 +368,12 @@
       "r": 15,
       "rx": 0.75,
       "y": 3.25,
-      "x": 5.25,
+      "x": 5.5,
       "t": "#7c70af\n#ff2c2c\n#008000\n#0000FF",
       "a": 4,
       "fa": [
         0,
-        4,
+        3,
         0,
         0,
         0,
@@ -408,11 +391,11 @@
       "r": 30,
       "rx": 0,
       "y": 0.6,
-      "x": 7.75,
+      "x": 8,
       "f": 5,
       "fa": [
-        4,
-        4,
+        3,
+        3,
         0,
         0,
         0,
@@ -421,20 +404,14 @@
         3
       ]
     },
-    "<i class='fa fa-mouse-pointer'></i>\n\n\n\n\n\nctrl\n<i class='kb kb-Unicode-BackSpace-DeleteLeft-Big'></i>"
+    "<i class='fa fa-mouse-pointer'></i>\n\n\n\n\n\nctrl\n<i class='mss mss-Return-5'></i>"
   ],
   [
     {
       "r": -30,
       "rx": 0.5,
-      "y": 7.85,
-      "x": 3.75,
-      "fa": [
-        4,
-        4,
-        0,
-        0
-      ]
+      "y": 8,
+      "x": 3.75
     },
     "<i class='fa fa-mouse-pointer'></i>\n\n\n\n\n\nctrl\n<i class='mss mss-Return-5'></i>"
   ],
@@ -444,7 +421,13 @@
       "rx": 0,
       "y": 6.9,
       "x": 7.5,
-      "f": 4
+      "f": 4,
+      "fa": [
+        3,
+        3,
+        0,
+        0
+      ]
     },
     "\n<i class='kb kb-Unicode-Control-3'></i>\n\n\n\n\n\n\n\nspc"
   ]
