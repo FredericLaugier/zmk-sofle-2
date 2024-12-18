@@ -170,11 +170,11 @@
             a_e: a_e {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <40>;
+                wait-ms = <30>;
                 tap-ms = <40>;
                 bindings
                     = <&macro_press   &kp LCTRL &kp LSHIFT &kp FR_U>
-                    , <&macro_tap     &kp FR_O &kp FR_O &kp FR_E &kp FR_6>
+                    , <&macro_tap     &kp N0 &kp N0 &kp E &kp N6>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
             };
@@ -182,11 +182,11 @@
             o_e: o_e {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
-                wait-ms = <40>;
+                wait-ms = <30>;
                 tap-ms = <40>;
                 bindings
-                    = <&macro_press   &kp LCTRL &kp LSHIFT &kp U>
-                    , <&macro_tap     &kp FR_O &kp FR_1 &kp FR_5 &kp FR_3>
+                    = <&macro_press   &kp LCTRL &kp LSHIFT &kp FR_U>
+                    , <&macro_tap     &kp N0 &kp N1 &kp N5 &kp N3>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
             };
@@ -273,14 +273,14 @@
 // |            |                |     TAB        |      HOME      |    UP_ARROW    |      END       |    LC(HOME)    |   MOVE_DOWN    |       +        |       7        |       8        |       9        |        *       |                |
 // |            |                |     CAPS       |   LEFT_ARROW   |   DOWN_ARROW   |  RIGHT_ARROW   |    LC(END)     |   MOVE_RIGHT   |       -        |       4        |       5        |       6        |        /       |                |
 // |            |                |                |      LCLK      |     MOVE_UP    |      RCLK      |                |   MOVE_LEFT    |       0        |       1        |       2        |       3        |        .       |                |
-// | C_MUTE     |                |                |   MOVE_LEFT    |    MOVE_DOWN   |   MOVE_RIGHT                |  DEL |   LCLK  |  ESC |             |                |                |                |                |
+// | C_MUTE     |                |                |   MOVE_LEFT    |    MOVE_DOWN   |   MOVE_RIGHT             |  LCTRL |   LCLK  |  RCTRL |            |                |                |                |                |
 
             bindings = <
                  &trans           &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &trans
                  &trans           &kp TAB          &kp HOME         &kp UP_ARROW     &kp END          &kp PAGE_UP      &mmv MOVE_DOWN   &kp FR_PLUS      &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_ASTERISK  &trans
                  &trans           &kp CAPS         &kp LEFT_ARROW   &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp PAGE_DOWN    &mmv MOVE_LEFT   &kp FR_MINUS     &kp FR_4         &kp FR_5         &kp FR_6         &kp FR_SLASH     &trans
                  &trans           &none            &mkp LCLK        &mmv MOVE_UP     &mkp RCLK        &none            &mmv MOVE_RIGHT  &kp FR_0         &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_DOT       &trans
-&kp C_MUTE                                         &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans      &kp DEL &mkp LCLK &kp ESC  &trans           &trans           &trans           &trans
+&kp C_MUTE                                         &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &trans      &kp LCTRL &mkp LCLK &kp RCTRL  &trans  &trans           &trans           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
