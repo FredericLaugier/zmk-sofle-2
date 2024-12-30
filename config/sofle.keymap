@@ -24,9 +24,6 @@
 #define FONCTIONS 5
 #define BT_OUT_SYS 6
 
-#define MY_COMMA_SEMI &mt FR_SEMICOLON FR_COMMA    // , / ;
-#define MY_DOT_COLON  &mt FR_COLON     FR_DOT      // . / :
-#define MY_EXCL_QUEST &mt FR_QUESTION  FR_EXCL     // ! / ?
 
 / {
 
@@ -215,7 +212,7 @@
                 bindings
                     = <&macro_press   &kp LCTRL &kp LSHIFT &kp FR_U>
                     // , <&macro_tap     &kp FR_0 &kp FR_0 &kp E &kp FR_6>
-                    , <&macro_tap     &kp LS(N0) &kp LS(N0) &kp E &kp LS(N6)>
+                    , <&macro_tap     &kp N0 &kp N0 &kp E &kp N6>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
             };
@@ -228,7 +225,7 @@
                 bindings
                     = <&macro_press   &kp LCTRL &kp LSHIFT &kp FR_U>
                     // , <&macro_tap     &kp FR_0 &kp FR_1 &kp FR_5 &kp FR_3>
-                    , <&macro_tap     &kp LS(N0) &kp LS(N1) &kp LS(N5) &kp LS(N3)>
+                    , <&macro_tap     &kp N0 &kp N1 &kp N5 &kp N3>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
             };
@@ -252,14 +249,14 @@
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |      ESC       |        1       |        2       |        3       |        4       |        5       |   UP_ARROW     |        6       |        7       |        8       |        9       |        0       |      DEL       |
 // |            |      TAB       |        A       |        Z       |        E       |        R       |        T       |   DOWN_ARROW   |        Y       |        U       |        I       |        O       |        P       |      BKSPC     |
-// |            |     CAPS       |        Q       |        S       |        D       |        F       |        G       |   LEFT_ARROW   |        H       |        J       |        K       |        L       |        M       |      ENTER     |
+// |            |     CAPS       |        Q       |        S       |        D       |        F       |  &mt LSHIFT G  |   LEFT_ARROW   |  &mt RSHIFT H  |        J       |        K       |        L       |        M       |      ENTER     |
 // |            |     LSHFT      |        W       |        X       |        C       |        V       |        B       |   RIGHT_ARROW  |        N       |      ,  ;      |       . :      |       ! ?      | &sl LAFAYETTE  |      SHIFT     |
 // | C_MUTE     |                | &mo FONCTIONS  |    LEFT_GUI    | LALT BACKSPACE | &lt NAVI SPACE |     LCTRL      |      ENTER     |     RCTRL      | &lt NAVI SPACE | &lt ALTGRD DEL |     K_CMENU    | &mo FONCTIONS  |                |
 
             bindings = <
                  &kp ESC          &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_4         &kp FR_5         &kp UP_ARROW     &kp FR_6         &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_0         &kp DELETE
                  &kp TAB          &tdA             &kp FR_Z         &tdE             &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
-                 &kp CAPS         &kp FR_Q         &tdS             &tdD             &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
+                 &kp CAPS         &kp FR_Q         &tdS             &tdD             &kp FR_F         &mt LSHIFT FR_G  &kp LEFT_ARROW   &mt RSHIFT FR_H  &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
                  &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &comma_semi      &dot_col         &excl_quest      &sl LAFAYETTE    &kp RSHFT
 &kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI   &mt LALT BACKSPACE &lt NAVI SPACE   &tdLCTRL         &kp ENTER        &tdRCTRL         &lt NAVI SPACE  &lt ALTGRD DELETE &kp K_CMENU      &mo FONCTIONS
 
