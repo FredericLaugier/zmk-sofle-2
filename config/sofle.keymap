@@ -55,7 +55,7 @@
         tdLCTRL: tap_dance_left_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             // bindings = <&mt LCTRL BACKSPACE>, <&to MOUSENAVI>;
             bindings = <&mt LCTRL ENTER>, <&to MOUSENAVI>;
         };
@@ -63,8 +63,33 @@
         tdRCTRL: tap_dance_right_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <&mt RCTRL ENTER>, <&to MOUSENAVI>;
+        };
+
+        tdA: tap_dance_a_grave {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_A>, <&kp FR_A_GRAVE>;
+        };
+        tdD: tap_dance_dollar {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_D>, <&kp FR_DOLLAR>;
+        };
+        tdE: tap_dance_e_aigu_grave {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_E>, <&kp FR_E_ACUTE>, <&kp FR_E_GRAVE>;
+        };
+        tdS: tap_dance_slash {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_S>, <&kp FR_SLASH>;
         };
 
         tdCommaSemmi: tap_dance_comma_semi {
@@ -189,7 +214,8 @@
                 tap-ms = <40>;
                 bindings
                     = <&macro_press   &kp LCTRL &kp LSHIFT &kp FR_U>
-                    , <&macro_tap     &kp FR_0 &kp FR_0 &kp E &kp FR_6>
+                    // , <&macro_tap     &kp FR_0 &kp FR_0 &kp E &kp FR_6>
+                    , <&macro_tap     &kp LS(N0) &kp LS(N0) &kp E &kp LS(N6)>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
             };
@@ -201,7 +227,8 @@
                 tap-ms = <40>;
                 bindings
                     = <&macro_press   &kp LCTRL &kp LSHIFT &kp FR_U>
-                    , <&macro_tap     &kp FR_0 &kp FR_1 &kp FR_5 &kp FR_3>
+                    // , <&macro_tap     &kp FR_0 &kp FR_1 &kp FR_5 &kp FR_3>
+                    , <&macro_tap     &kp LS(N0) &kp LS(N1) &kp LS(N5) &kp LS(N3)>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
             };
@@ -231,8 +258,8 @@
 
             bindings = <
                  &kp ESC          &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_4         &kp FR_5         &kp UP_ARROW     &kp FR_6         &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_0         &kp DELETE
-                 &kp TAB          &kp FR_A         &kp FR_Z         &kp FR_E         &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
-                 &kp CAPS         &kp FR_Q         &kp FR_S         &kp FR_D         &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
+                 &kp TAB          &tdA             &kp FR_Z         &tdE             &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
+                 &kp CAPS         &kp FR_Q         &tdS             &tdD             &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
                  &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &comma_semi      &dot_col         &excl_quest      &sl LAFAYETTE    &kp RSHFT
 &kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI   &mt LALT BACKSPACE &lt NAVI SPACE   &tdLCTRL         &kp ENTER        &tdRCTRL         &lt NAVI SPACE  &lt ALTGRD DELETE &kp K_CMENU      &mo FONCTIONS
 
