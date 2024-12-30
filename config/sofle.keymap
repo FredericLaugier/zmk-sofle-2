@@ -55,7 +55,7 @@
         tdLCTRL: tap_dance_left_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             // bindings = <&mt LCTRL BACKSPACE>, <&to MOUSENAVI>;
             bindings = <&mt LCTRL ENTER>, <&to MOUSENAVI>;
         };
@@ -63,33 +63,48 @@
         tdRCTRL: tap_dance_right_ctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&mt RCTRL ENTER>, <&to MOUSENAVI>;
         };
 
-        // col_semi: colon_semicolon {
-        //     compatible = "zmk,behavior-mod-morph";
-        //     #binding-cells = <0>;
-        //     bindings = <&kp COLON>, <&kp SEMI>;
-        //     mods = <(MOD_LSFT|MOD_RSFT)>;
-        // };
+        tdCommaSemmi: tap_dance_comma_semi {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
+        };
+        tdDotCol: tap_dance_dot_col {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_DOT>, <&kp FR_COLON>;
+        };
+        tdExclQuest: tap_dance_excl_quest {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_EXCL>, <&kp FR_QUESTION>;
+        };
 
         comma_semi: my_comma_semi {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
+            // bindings = <&kp FR_COMMA>, <&kp FR_SEMICOLON>;
+            bindings = <&tdCommaSemmi>, <&kp FR_SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         dot_col: my_dot_colon {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp FR_DOT>, <&kp FR_COLON>;
+            // bindings = <&kp FR_DOT>, <&kp FR_COLON>;
+            bindings = <&tdDotCol>, <&kp FR_COLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         excl_quest: my_excl_quest {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp FR_EXCL>, <&kp FR_QUESTION>;
+            // bindings = <&kp FR_EXCL>, <&kp FR_QUESTION>;
+            bindings = <&tdExclQuest>, <&kp FR_QUESTION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -174,7 +189,7 @@
                 tap-ms = <40>;
                 bindings
                     = <&macro_press   &kp LCTRL &kp LSHIFT &kp FR_U>
-                    , <&macro_tap     &kp N0 &kp N0 &kp E &kp N6>
+                    , <&macro_tap     &kp FR_0 &kp FR_0 &kp E &kp FR_6>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
             };
@@ -186,7 +201,7 @@
                 tap-ms = <40>;
                 bindings
                     = <&macro_press   &kp LCTRL &kp LSHIFT &kp FR_U>
-                    , <&macro_tap     &kp N0 &kp N1 &kp N5 &kp N3>
+                    , <&macro_tap     &kp FR_0 &kp FR_1 &kp FR_5 &kp FR_3>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     ;
             };
