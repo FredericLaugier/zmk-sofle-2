@@ -24,7 +24,8 @@
 #define FONCTIONS 5
 #define BT_OUT_SYS 6
 
-#define RGB_UG_CUSTOM &rgb_ug RGB_COLOR_HSB(247,49,30)
+// #define RGB_UG_CUSTOM &rgb_ug RGB_COLOR_HSB(247,49,30)
+#define RGB_UG_CUSTOM &rgb_ug RGB_COLOR_HSB(128,100,100)
 
 / {
 
@@ -215,7 +216,7 @@
                     , <&macro_tap     &kp U>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     // , <&macro_tap     &kp N0 &kp N0 &kp E &kp N6>
-                    , <&macro_tap     &kp FR_0 &kp FR_0 &kp E &kp FR_6>
+                    , <&macro_tap     &kp FR_0 &kp FR_0 &kp E &kp FR_6 &kp ENTER>
                     ;
             };
 
@@ -229,7 +230,7 @@
                     , <&macro_tap     &kp U>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
                     // , <&macro_tap     &kp N0 &kp N1 &kp N5 &kp N3>
-                    , <&macro_tap     &kp FR_0 &kp FR_1 &kp FR_5 &kp FR_3>
+                    , <&macro_tap     &kp FR_0 &kp FR_1 &kp FR_5 &kp FR_3 &kp ENTER>
                     ;
             };
 
@@ -251,8 +252,8 @@
         Base {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |      ESC       |        1       |        2       |        3       |        4       |        5       |   UP_ARROW     |        6       |        7       |        8       |        9       |        0       |      DEL       |
-// |            |      TAB       |        A       |        Z       |        E       |        R       |        T       |   DOWN_ARROW   |        Y       |        U       |        I       |        O       |        P       |      BKSPC     |
-// |            |     CAPS       |        Q       |        S       |        D       |        F       |  &mt LSHIFT G  |   LEFT_ARROW   |  &mt RSHIFT H  |        J       |        K       |        L       |        M       |      ENTER     |
+// |            |      TAB       |       tdA      |        Z       |       tdE      |        R       |        T       |   DOWN_ARROW   |        Y       |        U       |        I       |        O       |        P       |      BKSPC     |
+// |            |     CAPS       |        Q       |       tdS      |       tdD      |        F       |  &mt LSHIFT G  |   LEFT_ARROW   |  &mt RSHIFT H  |        J       |        K       |        L       |        M       |      ENTER     |
 // |            |     LSHFT      |        W       |        X       |        C       |        V       |        B       |   RIGHT_ARROW  |        N       |      ,  ;      |       . :      |       ! ?      | &sl LAFAYETTE  |      SHIFT     |
 // | C_MUTE     |                | &mo FONCTIONS  |    LEFT_GUI    | LALT BACKSPACE | &lt NAVI SPACE |     LCTRL      |      ENTER     |     RCTRL      | &lt NAVI SPACE | &lt ALTGRD DEL |     K_CMENU    | &mo FONCTIONS  |                |
 
@@ -353,20 +354,20 @@
         Fonctions {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |       ²        |       F1       |       F2       |       F3       |       F4       |       F5       |   SCRL_UP      |       F6       |       F7       |       F8       |       F9       |       F10      |     INSERT     |
-// |            |                |       F11      |       F12      |                |                |    LC(HOME)    |   SCRL_DOWN    |                |                |                |                |  PRINTSCREEN   |     INSERT     |
+// |            |                |       F11      |       F12      |                |                |    LC(HOME)    |   SCRL_DOWN    |    C_PREV      |  C_PLAY_PAUSE  |     C_NEXT     |     C_RECORD   |   PRINTSCREEN  |     INSERT     |
 // |            |                |     RGB_ON     |                |                |                |    LC(END)     |   SCRL_LEFT    |    RGB_SPI     |    RGB_EFF     |     RGB_HUI    |     RGB_SAI    |     RGB_BRI    |                |
 // |            |                |     RGB_OFF    |     RGB_TOG    |                | RGB_UG_CUSTOM  |    &to BASE    |   SCRL_RIGHT   |    RGB_SPD     |    RGB_EFR     |     RGB_HUD    |     RGB_SAD    |     RGB_BRD    |                |
 // | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
 
             bindings = <
                  &kp FR_SQUARE    &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &msc SCRL_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp INSERT
-                 &trans           &kp F11          &kp F12          &none            &none            &kp LC(HOME)     &msc SCRL_DOWN   &none            &none            &none            &none            &kp PRINTSCREEN  &kp INSERT
+                 &trans           &kp F11          &kp F12          &none            &none            &kp LC(HOME)     &msc SCRL_DOWN   &kp C_PREV       &kp C_PLAY_PAUSE &kp C_NEXT       &kp C_RECORD     &kp PRINTSCREEN  &kp INSERT
                  &trans           &rgb_ug RGB_ON   &none            &none            &none            &kp LC(END)      &msc SCRL_LEFT   &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &trans
                  &trans           &rgb_ug RGB_OFF  &rgb_ug RGB_TOG  &none            RGB_UG_CUSTOM    &to BASE         &msc SCRL_RIGHT  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &trans
-&kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
+&none                             &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
             display-name = "Fn";
         };
 
