@@ -24,8 +24,6 @@
 #define FONCTIONS 5
 #define BT_OUT_SYS 6
 
-#define RGB_UG_CUSTOM &rgb_ug RGB_COLOR_HSB(247,49,63)
-
 / {
 
    // Activate BT_OUT_SYS layer by pressing ALTGRD and FONCTIONS
@@ -211,10 +209,11 @@
                 wait-ms = <30>;
                 tap-ms = <40>;
                 bindings
-                    = <&macro_press   &kp LCTRL &kp LSHIFT &kp U>
+                    = <&macro_press   &kp LCTRL &kp LSHIFT>
+                    , <&macro_tap     &kp U>
                     // , <&macro_tap     &kp FR_0 &kp FR_0 &kp E &kp FR_6>
-                    , <&macro_tap     &kp N0 &kp N0 &kp E &kp N6 &kp ENTER>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
+                    , <&macro_tap     &kp N0 &kp N0 &kp E &kp N6>
                     ;
             };
 
@@ -224,10 +223,11 @@
                 wait-ms = <30>;
                 tap-ms = <40>;
                 bindings
-                    = <&macro_press   &kp LCTRL &kp LSHIFT &kp U>
+                    = <&macro_press   &kp LCTRL &kp LSHIFT>
+                    , <&macro_tap     &kp U>
                     // , <&macro_tap     &kp FR_0 &kp FR_1 &kp FR_5 &kp FR_3>
-                    , <&macro_tap     &kp N0 &kp N1 &kp N5 &kp N3 &kp ENTER>
                     , <&macro_release &kp LCTRL &kp LSHIFT>
+                    , <&macro_tap     &kp N0 &kp N1 &kp N5 &kp N3>
                     ;
             };
 
@@ -360,7 +360,7 @@
                  &kp FR_SQUARE    &kp F1           &kp F2           &kp F3           &kp F4           &kp F5           &msc SCRL_UP     &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp INSERT
                  &trans           &kp F11          &kp F12          &none            &none            &kp LC(HOME)     &msc SCRL_DOWN   &none            &none            &none            &none            &kp PRINTSCREEN  &kp INSERT
                  &trans           &rgb_ug RGB_ON   &none            &none            &none            &kp LC(END)      &msc SCRL_LEFT   &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &trans
-                 &trans           &rgb_ug RGB_OFF  &rgb_ug RGB_TOG  &none            RGB_UG_CUSTOM    &to BASE         &msc SCRL_RIGHT  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &trans
+                 &trans           &rgb_ug RGB_OFF  &rgb_ug RGB_TOG  &none &rgb_ug RGB_COLOR_HSB(247,49,63) &to BASE    &msc SCRL_RIGHT  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &trans
 &kp C_MUTE                        &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
 
