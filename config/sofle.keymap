@@ -11,10 +11,6 @@
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 200    // 10
-#define U_MS_U &mmv MOVE_UP
-#define U_MS_D &mmv MOVE_DOWN
-#define U_MS_L &mmv MOVE_LEFT
-#define U_MS_R &mmv MOVE_RIGHT
 
 #define BASE 0
 #define ALTGRD 1
@@ -25,7 +21,7 @@
 #define BT_OUT_SYS 6
 
 // #define RGB_UG_CUSTOM &rgb_ug RGB_COLOR_HSB(247,49,30)
-#define RGB_UG_CUSTOM &rgb_ug RGB_COLOR_HSB(128,100,100)
+#define RGB_UG_CUSTOM &rgb_ug RGB_COLOR_HSB(262,100,66)
 
 / {
 
@@ -336,7 +332,7 @@
 // |            |                |     TAB        |      HOME      |    UP_ARROW    |      END       |    LC(HOME)    |   MOVE_DOWN    |   SCRL_LEFT    |      LCLK      |    MOVE_UP     |     RCLK       |     SCRL_UP    |                |
 // |            |                |     CAPS       |   LEFT_ARROW   |   DOWN_ARROW   |  RIGHT_ARROW   |    LC(END)     |   MOVE_RIGHT   |   SCRL_RIGHT   |   MOVE_LEFT    |   MOVE_DOWN    |   MOVE_RIGHT   |    SCRL_DOWN   |                |
 // |            |                |                |                |                |                |                |   MOVE_LEFT    |                |       MB4      |      RCLK      |      MB5       |                |                |
-// | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
+// | C_MUTE     |                |                |                |                |                |        |  &to base |   LCLK  |  &to base |       |                |                |                |                |                |
 
             bindings = <
                  &to BASE         &none            &none            &none            &none            &none            &mmv MOVE_UP     &none            &none            &none            &none            &none            &trans
@@ -384,7 +380,7 @@
                  &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP     &none            &none            &none            &none            &none            &none
                  &none            &bt BT_CLR       &bt BT_CLR_ALL   &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &none            &none            &none            &none
                  &none            &out OUT_USB     &out OUT_BLE     &to BASE         &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &none
-                 &none            &sys_reset       &none            &bootloader      &none            &none            &mmv MOVE_RIGHT  &none            &none            &sys_reset       &soft_off        &bootloader      &none
+                 &none            &sys_reset       &soft_off        &bootloader      &none            &none            &mmv MOVE_RIGHT  &none            &none            &sys_reset       &soft_off        &bootloader      &none
 &trans                            &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
 
