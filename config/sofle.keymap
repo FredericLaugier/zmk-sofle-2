@@ -96,10 +96,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <
-                &kp FR_K                    // Single tap: K
-                , &kp LCTRL &kp FR_SLASH    // Double tap: Ctrl+/
-            >;
+            bindings = <&kp FR_K>, <&kp LCTRL &kp FR_SLASH>;
         };
         tdO: tap_dance_dquote {
             compatible = "zmk,behavior-tap-dance";
