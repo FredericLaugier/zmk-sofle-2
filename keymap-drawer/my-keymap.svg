@@ -201,7 +201,9 @@ path.combo {
 </g>
 <g transform="translate(480, 84)" class="key keypos-19">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap">U</text>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em">U</tspan><tspan x="0" dy="1.2em">ù</tspan>
+</text>
 </g>
 <g transform="translate(540, 84)" class="key keypos-20">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
@@ -1734,35 +1736,35 @@ path.combo {
 </g>
 <g transform="translate(150, 196)" class="key keypos-38">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">soft_off</tspan></text>
 </g>
 <g transform="translate(210, 196)" class="key keypos-39">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 70%">bootloader</tspan></text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">soft_off</tspan></text>
 </g>
 <g transform="translate(270, 196)" class="key keypos-40">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
 </g>
 <g transform="translate(330, 196)" class="key keypos-41">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 70%">bootloader</tspan></text>
 </g>
 <g transform="translate(420, 196)" class="key keypos-42">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 70%">bootloader</tspan></text>
 </g>
 <g transform="translate(480, 196)" class="key keypos-43">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
 </g>
 <g transform="translate(540, 196)" class="key keypos-44">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 78%">sys_reset</tspan></text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">soft_off</tspan></text>
 </g>
 <g transform="translate(600, 196)" class="key keypos-45">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 88%">soft_off</tspan></text>
 </g>
 <g transform="translate(660, 196)" class="key keypos-46">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 70%">bootloader</tspan></text>
+<text x="0" y="0" class="key tap"><tspan style="font-size: 78%">sys_reset</tspan></text>
 </g>
 <g transform="translate(720, 196)" class="key keypos-47">
 <rect rx="6" ry="6" x="-28" y="-26" width="56" height="52" class="key"/>

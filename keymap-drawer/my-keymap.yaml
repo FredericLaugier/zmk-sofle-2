@@ -12,7 +12,7 @@ layout: {ortho_layout: {split: true, rows: 4, columns: 6, thumbs: 5}}
 layers:
   Base:
     - ["ESC",      "1",         "2",         "3",         "4",         "5",         "6",         "7",         "8",         "9",         "0",         "⌦"]
-    - ["⭾",        "A à",       "Z",         "E é è",     "R",         "T",         "Y",         "U",         "I '",       "O \"",      "P",         "⌫"]
+    - ["⭾",        "A à",       "Z",         "E é è",     "R",         "T",         "Y",         "U ù",       "I '",       "O \"",      "P",         "⌫"]
     - ["⇬",        "Q /",       "S",         "D $",       "F",         "G ⇧",      "H ⇧",       "J",         "K c/",      "L",         "M",         "⏎"]
     - ["LSHFT",    "W",         "X cX",      "C cC",       "V cV",      "B",         "N",         ", ;",       ". :",       "! ?",  "&sl LAFAYETTE",  "RSHFT"]
     - ["&mo FONCTIONS", "LGUI", "LALT ⌫", "&ltNAVI SPACE",   "&tdNAVI LCTRL ⏎", "&tdNAVI RCTRL ⏎", "&ltNAVI SPACE", "ALTGRD ⌦", "CMENU", "&mo FONCTIONS"]
@@ -50,5 +50,5 @@ layers:
     - ["",         "bt SEL 0",   "bt SEL 1",  "bt SEL 2",   "bt SEL 3", "bt SEL 4",  "",          "",          "",          "",          "",           ""]
     - ["",         "bt CLR",     "bt CLR_ALL","",           "",         "",          "",          "",          "",          "",          "",           ""]
     - ["",         "OUT USB",    "OUT BLE",   "",           "F",        "",          "",          "",          "",          "",          "",           ""]
-    - ["",         "sys_reset",  "soft_off",  "bootloader", "",         "",          "",          "",          "sys_reset", "soft_off",  "bootloader", ""]
+    - ["",         "sys_reset",  "",          "soft_off",   "",         "bootloader","bootloader","",          "soft_off",  "",          "sys_reset",  ""]
     - [            "▽",          "▽",         "▽",          "▽",        "▽",         "▽",         "▽",         "▽",         "▽",         "▽"]

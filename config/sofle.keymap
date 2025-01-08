@@ -427,14 +427,14 @@
 // |            |                |  BT_SEL 0      |   BT_SEL 1     |   BT_SEL 2     |   BT_SEL 3     |   BT_SEL 4     |   MOVE_UP      |                |                |                |                |                |                |
 // |            |                |  BT_CLR        |   BT_CLR_ALL   |                |                |                |   MOVE_DOWN    |                |                |                |                |                |                |
 // |            |                |  OUT_USB       |   OUT_BLE      |   &to BASE     |        F       |                |   MOVE_RIGHT   |                |                |                |                |                |                |
-// |            |                |                |                |                |                |                |   MOVE_LEFT    |                |                |   sys_reset    |    soft_off    |   bootloader   |                |
+// |            |                |  sys_reset     |                |   soft_off     |                |  bootloader    |   MOVE_LEFT    |   bootloader   |                |   sys_reset    |                |   soft_off     |                |
 // | C_MUTE     |                |                |                |                |                |                |   LCLK         |                |                |                |                |                |                |
 
             bindings = <
                  &none            &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &mmv MOVE_UP     &none            &none            &none            &none            &none            &none
                  &none            &bt BT_CLR       &bt BT_CLR_ALL   &none            &none            &none            &mmv MOVE_DOWN   &none            &none            &none            &none            &none            &none
                  &none            &out OUT_USB     &out OUT_BLE     &to BASE         &kp FR_F         &none            &mmv MOVE_LEFT   &none            &none            &none            &none            &none            &none
-                 &none            &sys_reset       &soft_off        &bootloader      &none            &none            &mmv MOVE_RIGHT  &none            &none            &sys_reset       &soft_off        &bootloader      &none
+                 &none            &sys_reset       &none            &soft_off        &none            &bootloader      &mmv MOVE_RIGHT  &bootloader      &none            &sys_reset       &none            &soft_off        &none
 &trans                            &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &trans           &trans           &trans           &trans           &trans
             >;
 
