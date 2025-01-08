@@ -21,7 +21,7 @@
 #define BT_OUT_SYS 6
 
 // #define RGB_UG_CUSTOM &rgb_ug RGB_COLOR_HSB(247,49,30)
-#define RGB_UG_CUSTOM &rgb_ug RGB_COLOR_HSB(262,100,66)
+#define RGB_UG_CUSTOM &rgb_ug RGB_COLOR_HSB(258,100,66)
 
 / {
 
@@ -68,6 +68,12 @@
             tapping-term-ms = <200>;
             bindings = <&kp FR_A>, <&kp FR_A_GRAVE>;
         };
+        tdC: tap_dance_cedilla {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_C>, <&kp FR_C_CEDILLA>;
+        };
         tdD: tap_dance_dollar {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -80,12 +86,51 @@
             tapping-term-ms = <200>;
             bindings = <&kp FR_E>, <&kp FR_E_ACUTE>, <&kp FR_E_GRAVE>;
         };
-        tdS: tap_dance_slash {
+        tdI: tap_dance_squote {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp FR_S>, <&kp FR_SLASH>;
+            bindings = <&kp FR_I>, <&kp FR_SQUOT>;
         };
+        tdK: tap_dance_ctrl_slash {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <
+                &kp FR_K                    // Single tap: K
+                , &kp LCTRL &kp FR_SLASH    // Double tap: Ctrl+/
+            >;
+        };
+        tdO: tap_dance_dquote {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_O>, <&kp FR_DQUOT>;
+        };
+        tdQ: tap_dance_slash {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_Q>, <&kp FR_SLASH>;
+        };
+        // tdS: tap_dance_slash {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp FR_S>, <&kp FR_SLASH>;
+        // };
+        tdU: tap_dance_u_grave {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp FR_U>, <&kp FR_U_GRAVE>;
+        };
+        // tdZ: tap_dance_z_slash {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp FR_Z>, <&kp FR_SLASH>;
+        // };
 
         tdCommaSemmi: tap_dance_comma_semi {
             compatible = "zmk,behavior-tap-dance";
@@ -248,15 +293,15 @@
         Base {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |      ESC       |        1       |        2       |        3       |        4       |        5       |   UP_ARROW     |        6       |        7       |        8       |        9       |        0       |      DEL       |
-// |            |      TAB       |       tdA      |        Z       |       tdE      |        R       |        T       |   DOWN_ARROW   |        Y       |        U       |        I       |        O       |        P       |      BKSPC     |
-// |            |     CAPS       |        Q       |       tdS      |       tdD      |        F       |  &mt LSHIFT G  |   LEFT_ARROW   |  &mt RSHIFT H  |        J       |        K       |        L       |        M       |      ENTER     |
-// |            |     LSHFT      |        W       |        X       |        C       |        V       |        B       |   RIGHT_ARROW  |        N       |      ,  ;      |       . :      |       ! ?      | &sl LAFAYETTE  |      SHIFT     |
+// |            |      TAB       |       tdA      |        Z       |       tdE      |        R       |        T       |   DOWN_ARROW   |        Y       |        U       |       tdI      |       tdO      |        P       |      BKSPC     |
+// |            |     CAPS       |       tdQ      |        S       |       tdD      |        F       |  &mt LSHIFT G  |   LEFT_ARROW   |  &mt RSHIFT H  |        J       |       tdK      |        L       |        M       |      ENTER     |
+// |            |     LSHFT      |        W       |        X       |       tdC      |        V       |        B       |   RIGHT_ARROW  |        N       |      ,  ;      |       . :      |       ! ?      | &sl LAFAYETTE  |      SHIFT     |
 // | C_MUTE     |                | &mo FONCTIONS  |    LEFT_GUI    | LALT BACKSPACE | &lt NAVI SPACE |     LCTRL      |      ENTER     |     RCTRL      | &lt NAVI SPACE | &lt ALTGRD DEL |     K_CMENU    | &mo FONCTIONS  |                |
 
             bindings = <
                  &kp ESC          &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_4         &kp FR_5         &kp UP_ARROW     &kp FR_6         &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_0         &kp DELETE
-                 &kp TAB          &tdA             &kp FR_Z         &tdE             &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
-                 &kp CAPS         &kp FR_Q         &tdS             &tdD             &kp FR_F         &mt LSHIFT FR_G  &kp LEFT_ARROW   &mt RSHIFT FR_H  &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
+                 &kp TAB          &tdA             &kp FR_Z         &tdE             &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &tdI             &tdO             &kp FR_P         &kp BACKSPACE
+                 &kp CAPS         &tdQ             &kp FR_S         &tdD             &kp FR_F         &mt LSHIFT FR_G  &kp LEFT_ARROW   &mt RSHIFT FR_H  &kp FR_J         &tdK             &kp FR_L         &kp FR_M         &kp ENTER
                  &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &comma_semi      &dot_col         &excl_quest      &sl LAFAYETTE    &kp RSHFT
 &kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI   &mt LALT BACKSPACE &lt NAVI SPACE   &tdLCTRL         &kp ENTER        &tdRCTRL         &lt NAVI SPACE  &lt ALTGRD DELETE &kp K_CMENU      &mo FONCTIONS
 
@@ -271,14 +316,14 @@
 // |            |                |       €        |        ~       |        #       |        {       |        [       |   UP_ARROW     |        |       |        `       |       \        |        ^       |        @       |                |
 // |            |                |       @        |        <       |        >       |        $       |        %       |   DOWN_ARROW   |        +       |        `       |       '        |        "       |        *       |                |
 // |            |                |       {        |        (       |        )       |        }       |        =       |   LEFT_ARROW   |        -       |        _       |       \        |        |       |        /       |                |
-// |            |                |       ~        |        [       |        ]       |        ^       |        #       |   RIGHT_ARROW  |        °       |        ;       |       :        |        &       |        @       |                |
+// |            |                |       ~        |        [       |        ]       |        ^       |        #       |   RIGHT_ARROW  |        °       |        ;       |       :        |        &       |        €       |                |
 // | C_MUTE     |                |                |                |                |                |                |      ENTER     |                |                |                |                |                |                |
 
             bindings = <
                  &trans            &kp FR_EURO     &kp FR_TILDE     &kp FR_HASH      &kp FR_LCBR      &kp FR_LBKT      &kp UP_ARROW     &kp FR_PIPE      &kp FR_GRAVE     &kp FR_BACKSLASH &kp FR_CIRC      &kp FR_AT        &trans
                  &trans            &kp FR_AT       &kp FR_LT        &kp FR_GT        &kp FR_DOLLAR    &kp FR_PERCENT   &kp DOWN_ARROW   &kp FR_PLUS      &kp FR_GRAVE     &kp FR_SQUOT     &kp FR_DQUOT     &kp FR_ASTERISK  &trans
                  &trans            &kp FR_LCBR     &kp FR_LPAR      &kp FR_RPAR      &kp FR_RCBR      &kp FR_EQUAL     &kp LEFT_ARROW   &kp FR_MINUS     &kp FR_UNDER     &kp FR_BACKSLASH &kp FR_PIPE      &kp FR_SLASH     &trans
-                 &trans            &kp FR_TILDE    &kp FR_LBKT      &kp FR_RBKT      &kp FR_CIRC      &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DEGRE     &kp FR_SEMICOLON &kp FR_COLON     &kp FR_AMPERSAND &kp FR_AT        &trans
+                 &trans            &kp FR_TILDE    &kp FR_LBKT      &kp FR_RBKT      &kp FR_CIRC      &kp FR_HASH      &kp RIGHT_ARROW  &kp FR_DEGRE     &kp FR_SEMICOLON &kp FR_COLON     &kp FR_AMPERSAND &kp FR_EURO       &trans
 &kp C_MUTE                         &trans          &trans           &trans           &trans           &trans           &kp ENTER        &trans           &trans           &trans           &trans           &trans
             >;
 
