@@ -96,7 +96,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp FR_K>, <&sk LCTRL &kp FR_SLASH>;
+            bindings = <&kp FR_K>, <&kp LC(FR_SLASH)>;
         };
         tdO: tap_dance_dquote {
             compatible = "zmk,behavior-tap-dance";
