@@ -96,7 +96,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp FR_K>, <&kp LCTRL &kp FR_SLASH>;
+            bindings = <&kp FR_K>, <&sk LCTRL &kp FR_SLASH>;
         };
         tdO: tap_dance_dquote {
             compatible = "zmk,behavior-tap-dance";
@@ -290,16 +290,16 @@
         Base {
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |            |      ESC       |        1       |        2       |        3       |        4       |        5       |   UP_ARROW     |        6       |        7       |        8       |        9       |        0       |      DEL       |
-// |            |      TAB       |       tdA      |        Z       |       tdE      |        R       |        T       |   DOWN_ARROW   |        Y       |        U       |       tdI      |       tdO      |        P       |      BKSPC     |
+// |            |      TAB       |       tdA      |        Z       |       tdE      |        R       |        T       |   DOWN_ARROW   |        Y       |       tdU      |       tdI      |       tdO      |        P       |      BKSPC     |
 // |            |     CAPS       |       tdQ      |        S       |       tdD      |        F       |  &mt LSHIFT G  |   LEFT_ARROW   |  &mt RSHIFT H  |        J       |       tdK      |        L       |        M       |      ENTER     |
 // |            |     LSHFT      |        W       |        X       |       tdC      |        V       |        B       |   RIGHT_ARROW  |        N       |      ,  ;      |       . :      |       ! ?      | &sl LAFAYETTE  |      SHIFT     |
 // | C_MUTE     |                | &mo FONCTIONS  |    LEFT_GUI    | LALT BACKSPACE | &lt NAVI SPACE |     LCTRL      |      ENTER     |     RCTRL      | &lt NAVI SPACE | &lt ALTGRD DEL |     K_CMENU    | &mo FONCTIONS  |                |
 
             bindings = <
                  &kp ESC          &kp FR_1         &kp FR_2         &kp FR_3         &kp FR_4         &kp FR_5         &kp UP_ARROW     &kp FR_6         &kp FR_7         &kp FR_8         &kp FR_9         &kp FR_0         &kp DELETE
-                 &kp TAB          &tdA             &kp FR_Z         &tdE             &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &tdI             &tdO             &kp FR_P         &kp BACKSPACE
+                 &kp TAB          &tdA             &kp FR_Z         &tdE             &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &tdU             &tdI             &tdO             &kp FR_P         &kp BACKSPACE
                  &kp CAPS         &tdQ             &kp FR_S         &tdD             &kp FR_F         &mt LSHIFT FR_G  &kp LEFT_ARROW   &mt RSHIFT FR_H  &kp FR_J         &tdK             &kp FR_L         &kp FR_M         &kp ENTER
-                 &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &comma_semi      &dot_col         &excl_quest      &sl LAFAYETTE    &kp RSHFT
+                 &kp LSHFT        &kp FR_W         &kp FR_X         &tdC             &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &comma_semi      &dot_col         &excl_quest      &sl LAFAYETTE    &kp RSHFT
 &kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI   &mt LALT BACKSPACE &lt NAVI SPACE   &tdLCTRL         &kp ENTER        &tdRCTRL         &lt NAVI SPACE  &lt ALTGRD DELETE &kp K_CMENU      &mo FONCTIONS
 
             >;
