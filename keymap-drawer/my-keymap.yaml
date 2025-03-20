@@ -15,13 +15,13 @@ layers:
     - ["⭾",        "A à",       "Z",         "E é è",     "R",         "T",         "Y",         "U ù",       "I '",       "O \"",      "P",         "⌫"]
     - ["⇬",        "Q /",       "S",         "D $",       "F",         "G ⇧",      "H ⇧",       "J",         "K c/",      "L",         "M",         "⏎"]
     - ["LSHFT",    "W",         "X cX",      "C cC",       "V cV",      "B",         "N",         ", ;",       ". :",       "! ?",  "&sl LAFAYETTE",  "RSHFT"]
-    - ["&mo FONCTIONS", "LGUI", "LALT ⌫", "&ltNAVI SPACE",   "&tdNAVI LCTRL ⏎", "&tdNAVI RCTRL ⏎", "&ltNAVI SPACE", "ALTGRD ⌦", "CMENU", "&mo FONCTIONS"]
+    - ["&mo FONCTIONS", "LGUI", "LALT ⌫", "&ltNAVI SPACE", "LCTRL ⏎", "RCTRL ⏎", "&ltNAVI SPACE", "ALTGRD ⌦", "CMENU", "&mo FONCTIONS"]
   NoHomeRow:
     - ["ESC",      "1",         "2",         "3",         "4",         "5",         "6",         "7",         "8",         "9",         "0",         "⌦"]
     - ["⭾",        "A",         "Z",         "E",         "R",         "T",         "Y",         "U",         "I",         "O",         "P",         "⌫"]
     - ["⇬",        "Q",         "S",         "D",         "F",         "G",         "H",         "J",         "K",         "L",         "M",         "⏎"]
     - ["LSHFT",    "W",         "X",         "C",         "V",         "B",         "N",         ", ;",       ". :",       "! ?",  "&sl LAFAYETTE",  "RSHFT"]
-    - ["&mo FONCTIONS", "LGUI", "LALT ⌫", "&ltNAVI SPACE",   "&tdNAVI LCTRL ⏎", "&tdNAVI RCTRL ⏎", "&ltNAVI SPACE", "ALTGRD ⌦", "CMENU", "&mo FONCTIONS"]
+    - ["&mo FONCTIONS", "LGUI", "LALT ⌫", "&ltNAVI SPACE", "LCTRL ⏎", "RCTRL ⏎", "&ltNAVI SPACE", "ALTGRD ⌦", "CMENU", "&mo FONCTIONS"]
   AltGround:
     - ["▽",        "€",          "~",         "#",         "{",         "[",         "|",         "`",         "\\",        "^",         "@",         "▽"]
     - ["▽",        "@",          "<",         ">",         "$",         "%",         "+",         "`",         "'",         "\"",        "*",         "▽"]
