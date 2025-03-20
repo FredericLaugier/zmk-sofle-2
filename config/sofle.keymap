@@ -336,7 +336,7 @@
                  &kp TAB          &tdA             &kp FR_Z         &tdE             &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &tdU             &tdI             &tdO             &kp FR_P         &kp BACKSPACE
                  &kp CAPS         &tdQ             &kp FR_S         &tdD             &kp FR_F         &mt LSHIFT FR_G  &kp LEFT_ARROW   &mt RSHIFT FR_H  &kp FR_J         &tdK             &kp FR_L         &kp FR_M         &kp ENTER
                  &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &comma_semi      &dot_col         &excl_quest      &sl LAFAYETTE    &kp RSHFT
-&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI   &mt LALT BACKSPACE &lt NAVI SPACE   &tdLCTRL         &kp ENTER        &tdRCTRL         &lt NAVI SPACE  &lt ALTGRD DELETE &kp K_CMENU      &mo FONCTIONS
+&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI   &mt LALT BACKSPACE &lt NAVI SPACE   &kp LCTRL        &kp ENTER        &kp RCTRL        &lt NAVI SPACE  &lt ALTGRD DELETE &kp K_CMENU      &mo FONCTIONS
 
             >;
 
@@ -357,7 +357,7 @@
                  &kp TAB          &kp FR_A         &kp FR_Z         &kp FR_E         &kp FR_R         &kp FR_T         &kp DOWN_ARROW   &kp FR_Y         &kp FR_U         &kp FR_I         &kp FR_O         &kp FR_P         &kp BACKSPACE
                  &kp CAPS         &kp FR_Q         &kp FR_S         &kp FR_D         &kp FR_F         &kp FR_G         &kp LEFT_ARROW   &kp FR_H         &kp FR_J         &kp FR_K         &kp FR_L         &kp FR_M         &kp ENTER
                  &kp LSHFT        &kp FR_W         &kp FR_X         &kp FR_C         &kp FR_V         &kp FR_B         &kp RIGHT_ARROW  &kp FR_N         &comma_semi      &dot_col         &excl_quest      &sl LAFAYETTE    &kp RSHFT
-&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI   &mt LALT BACKSPACE &lt NAVI SPACE   &tdLCTRL         &kp ENTER        &tdRCTRL         &lt NAVI SPACE  &lt ALTGRD DELETE &kp K_CMENU      &mo FONCTIONS
+&kp C_MUTE                        &mo FONCTIONS    &kp LEFT_GUI   &mt LALT BACKSPACE &lt NAVI SPACE   &kp LCTRL        &kp ENTER        &kp RCTRL        &lt NAVI SPACE  &lt ALTGRD DELETE &kp K_CMENU      &mo FONCTIONS
 
             >;
 
