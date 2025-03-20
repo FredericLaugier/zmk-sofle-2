@@ -151,7 +151,7 @@
 #define FR_BACKSLASH        RA(FR_UNDER)      // (backslash)
 #define FR_AT               RA(FR_A_GRAVE)    // @
 #define FR_RBKT             RA(FR_RPAR)       // ]
-#define FR_RCBR             RA(FR_EQUAL)        // }
+#define FR_RCBR             RA(FR_EQUAL)      // }
 // Row 2
 #define FR_EURO             RA(E)             // €
 #define FR_CURR             RA(FR_DOLLAR)     // ¤
