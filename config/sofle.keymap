@@ -162,10 +162,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <HM_TAPPING_TERM>;
-            bindings = <
-                &mt_shift_fr_g         // Single tap or hold: FR_G or LSHIFT
-                , &kp FR_EQUAL         // Double tap: FR_EQUAL
-            >;
+            bindings = <&mt_shift_fr_g>, <&kp FR_EQUAL>;
         };
 
 
