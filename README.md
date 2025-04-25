@@ -4,6 +4,14 @@ If you need the 3D printed model file or if there are any abnormalities with the
 
 # zmk-config-sofle
 
+this
+
+```bash
+keymap draw keymap-drawer/my-keymap.yaml > keymap-drawer/my-keymap.svg
+convert -density 300 keymap-drawer/my-keymap.svg -background grey -flatten keymap-drawer/my-keymap.jpg
+```
+
+produces
 
 <img src="keymap-drawer/my-keymap.svg" >
 
